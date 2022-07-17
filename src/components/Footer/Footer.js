@@ -4,8 +4,7 @@ export const Footer = () => {
   return (
     <footer className="container-footer">
       <p>
-        Mira mi trabajo en <span className="white-text">Github</span> o{" "}
-        <span className="white-text">Behance</span>
+        made with &#129293; + &#127861; + &#127774; by michelle zhang
       </p>
     </footer>
   );

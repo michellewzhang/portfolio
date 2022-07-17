@@ -1,9 +1,9 @@
 .container-mode {
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem 0;
-  justify-content: space-around;
-  align-items: center;
+  padding: 1.2rem 0;
+  justify-content: left;
+  align-items: normal;
 }
 
 .mode-left ul {
@@ -12,7 +12,9 @@
 }
 
 .mode-left ul li {  
-  margin: 0 1.5rem;
+  margin: 1rem 1rem;
+  padding-right: 0rem;
+  padding-left: 0.2rem;
 }
 
 .left-source {
@@ -26,14 +28,15 @@
 
 .container-icon {
   cursor: pointer;
-  padding: 0.5rem 0.6rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 2rem;
   border: none;
-  background: var(--gray-color);
+  background: var(--black-color);
   border-radius: 10px;
 }
 
 .mode-icon {
-  color: var(--purple-smoke-color);
+  color: var(--white-color);
   font-size: 20px;
 }
 
@@ -47,7 +50,6 @@ a {
 
 .link-decoration {
   position: relative;
-  color: white;
 }
 
 .link-decoration::before,
@@ -62,7 +64,7 @@ a {
 
 
 .link-decoration::after {
-  background: white;
+  background: var(--white-color);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 300ms ease-out;

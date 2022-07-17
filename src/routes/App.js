@@ -1,15 +1,25 @@
 import { BrowserRouter, Routes, Route, Link, Outlet, useLocation } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import { useState } from "react";
+import { useState, useLayoutEffect } from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Project from "../components/Project/Project";
 import About from "../components/About/About"; 
+import Creative from "../components/Creative/Creative";
+import Meta from "../components/Meta/Meta";
 import { RiSunFill, RiMoonClearFill } from "react-icons/ri";
 import { AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 const PageLayout = ({ children }) => children;
+
+const Wrapper = ({children}) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }, [location.pathname]);
+  return children;
+} 
 
 const pageVariants = {
   initial: {
@@ -56,6 +66,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
+    <Wrapper>
     <div className={whiteMode ? "white-mode" : "dark-mode"}>
       <section className="container-mode">
       <button onClick={handleModeChange} className="container-icon">
@@ -76,10 +87,19 @@ function App() {
         <Route element={<AnimationLayout />}>
           <Route path="/" element={<Projects />} />
           <Route path="/about" element={<About />} />
+          <Route path="/creative" element={<Creative />} />
+          <Route path="/meta" element={<Meta />} />
+          <Route path="/verizon" element={<Creative />} />
+          <Route path="/schema" element={<Creative />} />
+          <Route path="/ripe" element={<Creative />} />
+          <Route path="/awareai" element={<Creative />} />
+          <Route path="/choosie" element={<Creative />} />
+          <Route path="/optimize" element={<Creative />} />
         </Route>
       </Routes>
       <Footer />
       </div>
+      </Wrapper>
     </BrowserRouter>
     </>
   );

@@ -55,7 +55,7 @@ export default function About() {
           <br></br><br></br>
           i'm fascinated by the convergence of design and innovative computing, 
           and how we can use this harmonization for positive social impact.
-          i love working with interdisciplinary teams!
+          i love working in interdisciplinary teams!
           <br></br><br></br>
           i'm a fan of trying weird recipes and making a mess in my kitchen, 
           hoarding small plants, making elaborate cheeseboards for picnics,

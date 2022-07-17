@@ -5,7 +5,7 @@ export default function Header() {
     <section className="header">
       <header>
         <h1>  
-          <span className="header-title"> michelle zhang</span>
+          <span className="header-title">michelle zhang</span>
           <span className="header-description"> &nbsp; /  &nbsp; developer + designer</span>
         </h1>
       </header>

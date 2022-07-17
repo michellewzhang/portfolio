@@ -52,7 +52,6 @@ function Project() {
           </Item>
           </span>
         </Grid>
-
         <Grid item xs={4} sm={4} md={6}>
         <span className="proj-container">
           <Item>

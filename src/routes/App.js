@@ -11,6 +11,7 @@ import Ripe from "../components/Ripe/Ripe";
 import Schema from "../components/Schema/Schema";
 import Choosie from "../components/Choosie/Choosie";
 import Awareai from "../components/Awareai/Awareai";
+import Verizon from "../components/Verizon/Verizon";
 import { RiSunFill, RiMoonClearFill } from "react-icons/ri";
 import { FiArrowUpCircle } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
@@ -112,7 +113,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/creative" element={<Creative />} />
           <Route path="/meta" element={<Meta />} />
-          <Route path="/verizon" element={<Creative />} />
+          <Route path="/verizon" element={<Verizon />} />
           <Route path="/schema" element={<Schema />} />
           <Route path="/ripe" element={<Ripe />} />
           <Route path="/awareai" element={<Awareai />} />

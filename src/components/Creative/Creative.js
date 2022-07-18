@@ -33,8 +33,6 @@ const gridContainer = {
   gridAutoFlow: "column",
 };
 
-const imgSrc = '../../images/creator_studio.png';
-
 function Creative() {
   return (
     <>

@@ -21,7 +21,6 @@ const Img = styled('img')({
   height: '100%',
 });
 
-
 const Item = styled(Paper)(({ theme }) => ({
   height: '25rem',
   textAlign: 'center',
@@ -35,8 +34,6 @@ const gridContainer = {
   gridAutoColumns: "1fr",
   gridAutoFlow: "column",
 };
-
-const imgSrc = '../../images/creator_studio.png';
 
 function Project() {
   return (

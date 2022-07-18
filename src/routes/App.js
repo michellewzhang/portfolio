@@ -7,6 +7,7 @@ import Project from "../components/Project/Project";
 import About from "../components/About/About"; 
 import Creative from "../components/Creative/Creative";
 import Meta from "../components/Meta/Meta";
+import Ripe from "../components/Ripe/Ripe";
 import { RiSunFill, RiMoonClearFill } from "react-icons/ri";
 import { AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
@@ -91,7 +92,7 @@ function App() {
           <Route path="/meta" element={<Meta />} />
           <Route path="/verizon" element={<Creative />} />
           <Route path="/schema" element={<Creative />} />
-          <Route path="/ripe" element={<Creative />} />
+          <Route path="/ripe" element={<Ripe />} />
           <Route path="/awareai" element={<Creative />} />
           <Route path="/choosie" element={<Creative />} />
           <Route path="/optimize" element={<Creative />} />

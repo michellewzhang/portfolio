@@ -229,3 +229,7 @@ a:hover .link-decoration::after {
 a:hover img {
   transform: translateX(0);
 }
+
+.link-decoration-active {
+  color: blue;
+}

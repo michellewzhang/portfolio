@@ -23,6 +23,7 @@ const Img = styled('img')({
 const ImgLarge = styled('img')({
     width: '100%',
     paddingTop: '0.3rem',
+    paddingBottom: '0.3rem',
 });
   
 
@@ -85,6 +86,7 @@ function Ripe() {
           </ItemText>
           </span>
         </Grid>
+        <ImgLarge src={ripe}/>
         <Grid item xs={4} sm={4} md={6}>
         <span className="proj-container">
           <Item>
@@ -115,7 +117,6 @@ function Ripe() {
         </Grid>
     </Grid>
     </Box>
-    <ImgLarge src={ripe}/>
   </>
   );
 }

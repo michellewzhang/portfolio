@@ -9,6 +9,7 @@ import Creative from "../components/Creative/Creative";
 import Meta from "../components/Meta/Meta";
 import Ripe from "../components/Ripe/Ripe";
 import Schema from "../components/Schema/Schema";
+import Choosie from "../components/Choosie/Choosie";
 import { RiSunFill, RiMoonClearFill } from "react-icons/ri";
 import { AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
@@ -95,7 +96,7 @@ function App() {
           <Route path="/schema" element={<Schema />} />
           <Route path="/ripe" element={<Ripe />} />
           <Route path="/awareai" element={<Creative />} />
-          <Route path="/choosie" element={<Creative />} />
+          <Route path="/choosie" element={<Choosie />} />
           <Route path="/optimize" element={<Creative />} />
         </Route>
       </Routes>

@@ -18,9 +18,8 @@ import ProjectSpecs from '../ProjectSpecs/ProjectSpecs';
 
 const Img = styled('img')({
   objectFit: 'cover',
-  width: '90%',
+  width: '100%',
   height: '100%',
-  margin: '1rem',
 });
 
 const ImgLarge = styled('img')({

@@ -10,8 +10,9 @@ export default function ProjectSpecs(props) {
         <div className="spec-title">skills</div>
         <div className="spec-value">{props.skills}</div>
         <Divider variant="middle" />
+        {props.tools !== "" ? (<>
         <div className="spec-title">tools</div>
-        <div className="spec-value">{props.tools}</div>
+        <div className="spec-value">{props.tools}</div></>) : null}
       </div>
     );
   }

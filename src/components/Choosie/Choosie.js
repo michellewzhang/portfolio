@@ -107,11 +107,11 @@ function Choosie() {
                 we received from peers, professors, and other guests after numerous critiques.<br></br><br></br>
             </p>
             <div className="about-links-container">
-          <a
+            <a
 							href="https://drive.google.com/file/d/1cKiYJfFLZa99bQpKCNVmPDIyv4VGbZHp/view"
 							target="_blank" rel="noopener noreferrer"><span className="about-link">final pitch slide deck </span>
-          </a>
-          </div>
+            </a>
+            </div>
           </ItemText>
           </span>
         </Grid>

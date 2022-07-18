@@ -81,8 +81,14 @@ function Ripe() {
                 <br></br> <br></br>
                 Users also have the ability to search for a nearby food pantry to donate unused food at the end of the period.
                 <br></br> <br></br>
-                I created this prototype during a hackathon focused on environmental sustainability.
+                I created this             <span className="about-links-container">
+            <a
+							href="https://www.figma.com/proto/eIahnqomGcc3zzHsxXsYxM/ripe!?node-id=427%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=427%3A2"
+							target="_blank" rel="noopener noreferrer"><span className="about-link">prototype </span>
+            </a>
+            </span> during a hackathon focused on environmental sustainability.
             </p>
+
           </ItemText>
           </span>
         </Grid>

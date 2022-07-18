@@ -230,6 +230,19 @@ a:hover img {
   transform: translateX(0);
 }
 
-.link-decoration-active {
-  color: blue;
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 40px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 100px;
+  border: none;
+}
+
+.back-to-top:hover {
+  color: var(--black-color);
+  transition: 0.4s;
 }

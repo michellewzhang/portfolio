@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link, Outlet, useLocation } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import { useState, useLayoutEffect } from "react";
+import { useState, useLayoutEffect, useEffect } from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Project from "../components/Project/Project";
@@ -12,6 +12,7 @@ import Schema from "../components/Schema/Schema";
 import Choosie from "../components/Choosie/Choosie";
 import Awareai from "../components/Awareai/Awareai";
 import { RiSunFill, RiMoonClearFill } from "react-icons/ri";
+import { FiArrowUpCircle } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
@@ -62,6 +63,24 @@ const AnimationLayout = () => {
 
 function App() {
   const [whiteMode, setQuietMode] = useState(true);
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    });
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const handleModeChange = () => {
     setQuietMode(!whiteMode);
@@ -102,6 +121,11 @@ function App() {
         </Route>
       </Routes>
       <Footer />
+      {showButton && (
+        <button onClick={scrollToTop} className="back-to-top">
+          <FiArrowUpCircle/>
+        </button>
+      )}
       </div>
       </Wrapper>
     </BrowserRouter>

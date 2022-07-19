@@ -12,6 +12,7 @@ import Schema from "../components/Schema/Schema";
 import Choosie from "../components/Choosie/Choosie";
 import Awareai from "../components/Awareai/Awareai";
 import Verizon from "../components/Verizon/Verizon";
+import Optimize from "../components/Optimize/Optimize";
 import { RiSunFill, RiMoonClearFill } from "react-icons/ri";
 import { FiArrowUpCircle } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
@@ -118,7 +119,7 @@ function App() {
           <Route path="/ripe" element={<Ripe />} />
           <Route path="/awareai" element={<Awareai />} />
           <Route path="/choosie" element={<Choosie />} />
-          <Route path="/optimize" element={<Creative />} />
+          <Route path="/optimize" element={<Optimize />} />
         </Route>
       </Routes>
       <Footer />

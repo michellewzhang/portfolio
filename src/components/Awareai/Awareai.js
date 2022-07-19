@@ -77,7 +77,7 @@ const gridContainer = {
   gridAutoColumns: "1fr",
   gridAutoFlow: "column",
 };
-function Choosie() {
+function Aware() {
   return (
     <>
     <ProjectHeader title="aware.ai" description="startup brand identity" details="mobile app prototyping and brand identity curation for an artificial intelligence startup"/>
@@ -231,4 +231,4 @@ function Choosie() {
   );
 }
 
-export default Choosie;
+export default Aware;

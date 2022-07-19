@@ -11,8 +11,6 @@ import choosie_stat1 from "../../images/choosie_stat1.png";
 import choosie_stat2 from "../../images/choosie_stat2.png";
 import choosie_interview from "../../images/choosie_interview.png";
 import choosie_insight from "../../images/choosie_insight.png";
-import { Link, Outlet } from 'react-router-dom';
-import Header from '../Header/Header';
 import ProjectHeader from '../ProjectHeader/ProjectHeader';
 import ProjectSpecs from '../ProjectSpecs/ProjectSpecs';
 

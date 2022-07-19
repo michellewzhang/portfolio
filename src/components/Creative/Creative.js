@@ -7,9 +7,6 @@ import Grid from '@mui/material/Grid';
 import bounce from "../../images/creative_bounce.gif";
 import lattice from "../../images/creative_lattice.gif";
 import starry from "../../images/creative_starry.gif";
-import etc from "../../images/creative.png";
-import { Link, Outlet } from 'react-router-dom';
-import Header from '../Header/Header';
 import ProjectHeader from '../ProjectHeader/ProjectHeader';
 
 const Img = styled('img')({

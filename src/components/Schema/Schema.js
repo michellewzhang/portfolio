@@ -11,8 +11,6 @@ import dialog4 from "../../images/dialog4.png";
 import dialog5 from "../../images/dialog5.png";
 import dialog_overview from "../../images/dialog_overview.png";
 import dialog_example from "../../images/dialog_example.png";
-import { Link, Outlet } from 'react-router-dom';
-import Header from '../Header/Header';
 import ProjectHeader from '../ProjectHeader/ProjectHeader';
 import ProjectSpecs from '../ProjectSpecs/ProjectSpecs';
 

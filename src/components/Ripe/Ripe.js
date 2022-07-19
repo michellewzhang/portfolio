@@ -9,8 +9,6 @@ import ripe2 from "../../images/ripe2.png";
 import ripe3 from "../../images/ripe3.png";
 import ripe4 from "../../images/ripe4.png";
 import ripe5 from "../../images/ripe5.png";
-import { Link, Outlet } from 'react-router-dom';
-import Header from '../Header/Header';
 import ProjectHeader from '../ProjectHeader/ProjectHeader';
 import ProjectSpecs from '../ProjectSpecs/ProjectSpecs';
 

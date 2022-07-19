@@ -8,8 +8,6 @@ import prototype0 from "../../images/prototype0.gif";
 import prototype1 from "../../images/prototype1.gif";
 import prototype2 from "../../images/prototype2.gif";
 import prototype3 from "../../images/prototype3.gif";
-import { Link, Outlet } from 'react-router-dom';
-import Header from '../Header/Header';
 import ProjectHeader from '../ProjectHeader/ProjectHeader';
 import ProjectSpecs from '../ProjectSpecs/ProjectSpecs';
 
@@ -17,12 +15,6 @@ const Img = styled('img')({
   objectFit: 'cover',
   width: '100%',
   height: '100%',
-});
-
-const ImgLarge = styled('img')({
-    width: '100%',
-    paddingTop: '0.3rem',
-    paddingBottom: '0.3rem',
 });
   
 const ItemText = styled(Paper)(({ theme }) => ({
@@ -45,19 +37,6 @@ const ItemDescription = styled(Paper)(({ theme }) => ({
     textAlign: 'left',
     paddingTop: '0rem',
     padding: '5rem',
-    lineHeight: '1.5rem',
-    background: 'transparent',
-  }));
-
-  const FinalItemDescription = styled(Paper)(({ theme }) => ({
-    margin: '0.3rem',
-    marginTop: '0rem',
-    color: 'var(--light-green-color)',
-    boxShadow: 'none',
-    textAlign: 'left',
-    paddingTop: '3rem',
-    paddingLeft: '15vw',
-    paddingRight: '15vw',
     lineHeight: '1.5rem',
     background: 'transparent',
   }));

@@ -56,7 +56,7 @@ const gridContainer = {
 function Optimize() {
   return (
     <>
-    <ProjectHeader title="optimized object manipulation" description="creative coding" details="user test to develop an improved object manipulation design"/>
+    <ProjectHeader title="optimized object manipulation" description="creative coding" details="developing an improved object manipulation design"/>
     <Box sx={gridContainer}>
       <Grid container spacing={{ xs: 1, md: 1 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         <Grid item xs={4} sm={8} md={6}>

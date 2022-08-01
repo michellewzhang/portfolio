@@ -107,7 +107,7 @@ function Choosie() {
             <div className="about-links-container">
             <a
 							href="https://drive.google.com/file/d/1cKiYJfFLZa99bQpKCNVmPDIyv4VGbZHp/view"
-							target="_blank" rel="noopener noreferrer"><span className="about-link">final pitch slide deck </span>
+							target="_blank" rel="noopener noreferrer"><span className="mode-left white-text about-link">final pitch slide deck </span>
             </a>
             </div>
           </ItemText>

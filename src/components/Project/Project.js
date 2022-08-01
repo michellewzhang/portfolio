@@ -13,7 +13,6 @@ import choosie from "../../images/choosie.png";
 import awareAI from "../../images/awareai.png";
 import etc from "../../images/creative.png";
 import { Link, Outlet } from 'react-router-dom';
-import Header from '../Header/Header';
 
 const Img = styled('img')({
   objectFit: 'cover',
@@ -44,7 +43,7 @@ function Project() {
         <span className="proj-container">
           <Item>
           <Img src={vuzix}/>
-          <Link to="/verizon">
+          <Link to="/user/mwzhang/verizon">
           <span className="overlay">
               <span className="overlay-text-title">verizon internship
                 <div className="overlay-text-description">3D software development for AR glasses</div>
@@ -58,7 +57,7 @@ function Project() {
         <span className="proj-container">
           <Item>
             <Img src={creatorStudio}/>
-            <Link to="/meta">
+            <Link to="/user/mwzhang/meta">
             <span className="overlay">
               <span className="overlay-text-title">meta internship
                 <div className="overlay-text-description">full stack development</div>
@@ -72,7 +71,7 @@ function Project() {
         <span className="proj-container">
           <Item>
             <Img src={choosie}/>
-            <Link to="/choosie">
+            <Link to="/user/mwzhang/choosie">
             <span className="overlay">
               <span className="overlay-text-title">choosie
                 <div className="overlay-text-description">digital startup pitch</div>
@@ -86,7 +85,7 @@ function Project() {
         <span className="proj-container">
           <Item>
             <Img src={ripe}/>
-            <Link to="/ripe">
+            <Link to="/user/mwzhang/ripe">
             <span className="overlay">
               <span className="overlay-text-title">ripe!
                 <div className="overlay-text-description">app prototype</div>
@@ -100,7 +99,7 @@ function Project() {
         <span className="proj-container">
           <Item>
             <Img src={dialog}/>
-            <Link to="/schema">
+            <Link to="/user/mwzhang/schema">
             <span className="overlay">
               <span className="overlay-text-title">dialog schema builder
                 <div className="overlay-text-description">full stack development</div>
@@ -114,7 +113,7 @@ function Project() {
         <span className="proj-container">
           <Item>
             <Img src={awareAI}/>
-            <Link to="/awareai">
+            <Link to="/user/mwzhang/awareai">
             <span className="overlay">
               <span className="overlay-text-title">aware.ai
                 <div className="overlay-text-description">startup brand identity</div>
@@ -128,7 +127,7 @@ function Project() {
         <span className="proj-container">
           <Item>
             <Img src={dhcs}/>
-            <Link to="/optimize">
+            <Link to="/user/mwzhang/optimize">
             <span className="overlay">
               <span className="overlay-text-title">optimized object manipulation
                 <div className="overlay-text-description">creative coding</div>
@@ -142,7 +141,7 @@ function Project() {
         <span className="proj-container">
           <Item>
             <Img src={etc}/>
-            <Link to="/creative">
+            <Link to="/user/mwzhang/creative">
             <span className="overlay">
               <span className="overlay-text-title">etc
                 <div className="overlay-text-description">creative coding</div>

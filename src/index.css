@@ -74,18 +74,6 @@ body {
   -moz-text-fill-color: transparent;
 }
 
-.white-mode .about-links-container {
-  font-size: 1rem;
-  font-weight: bold;
-  background: var(--dark-green-color);
-  background-size: 100%;
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-
 .white-mode a {
   color: var(--dark-green-color);
 }
@@ -113,9 +101,9 @@ body {
 
 
 
-.white-text {
+.white-mode .white-text {
   font-weight: 500;
-  color: var(--white-color);
+  color: var(--black-color);
 }
 
 .container {

@@ -82,7 +82,7 @@ function Ripe() {
                 I created this             <span className="about-links-container">
             <a
 							href="https://www.figma.com/proto/eIahnqomGcc3zzHsxXsYxM/ripe!?node-id=427%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=427%3A2"
-							target="_blank" rel="noopener noreferrer"><span className="about-link">prototype </span>
+							target="_blank" rel="noopener noreferrer"><span className="mode-left white-text about-link">prototype </span>
             </a>
             </span> during a hackathon focused on environmental sustainability.
             </p>

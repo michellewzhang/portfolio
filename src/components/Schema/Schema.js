@@ -97,12 +97,12 @@ function Schema() {
             <div className="about-links-container">
           <a
 							href="https://github.com/michellewzhang/schema"
-							target="_blank" rel="noopener noreferrer"><span className="about-link">github repo </span>
+							target="_blank" rel="noopener noreferrer"><span className="mode-left white-text about-link">github repo </span>
           </a>
           <span className="header-about-description"> &nbsp; / &nbsp; </span>
           <a
 							href="https://drive.google.com/file/d/1IN6RDCEs8KLbLBMYelfEsTRW67i29Dat/view"
-							target="_blank" rel="noopener noreferrer"><span className="about-link">final paper </span>
+							target="_blank" rel="noopener noreferrer"><span className="mode-left white-text about-link">final paper </span>
           </a>
           </div>
           </ItemText>

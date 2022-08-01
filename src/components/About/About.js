@@ -64,17 +64,17 @@ export default function About() {
           <div className="about-links-container">
           <a
 							href="https://drive.google.com/file/d/1kVJnEJxXGIqruOmKy7nTE9uqBL7spPap/view?usp=sharing"
-							target="_blank" rel="noopener noreferrer"><span className="about-link">resume </span>
+							target="_blank" rel="noopener noreferrer"><span className="mode-left white-text about-link">resume </span>
           </a>
           <span className="header-about-description"> &nbsp; / &nbsp; </span>
           <a
 							href="mailto:mwzhang@andrew.cmu.edu"
-							target="_blank" rel="noopener noreferrer"><span className="about-link">email </span>
+							target="_blank" rel="noopener noreferrer"><span className="mode-left white-text about-link">email </span>
           </a>
           <span className="header-about-description"> &nbsp; / &nbsp; </span>
           <a
 							href="https://www.linkedin.com/in/michellezhang1015/"
-							target="_blank" rel="noopener noreferrer"><span className="about-link">linkedin </span>
+							target="_blank" rel="noopener noreferrer"><span className="mode-left white-text about-link">linkedin </span>
           </a>
           </div>
             </ItemRight>

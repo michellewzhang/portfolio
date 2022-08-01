@@ -24,18 +24,6 @@
     -moz-text-fill-color: transparent;
   }
 
-  .about-links-container {
-    font-size: 1rem;
-    font-weight: bold;
-    background: var(--cream-color);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-  }
-
   a:hover .about-link {
     background: var(--light-green-color);
     background-size: 100%;
@@ -44,5 +32,10 @@
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
-    transition: 0.5s;
+    transition: 1.3s;
+  }
+
+  .white-text {
+    font-weight: 500;
+    color: var(--white-color);
   }

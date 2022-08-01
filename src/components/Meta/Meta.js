@@ -4,20 +4,8 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import bounce from "../../images/creative_bounce.gif";
-import lattice from "../../images/creative_lattice.gif";
-import starry from "../../images/creative_starry.gif";
-import etc from "../../images/creative.png";
-import { Link, Outlet } from 'react-router-dom';
-import Header from '../Header/Header';
 import ProjectHeader from '../ProjectHeader/ProjectHeader';
 import ProjectSpecs from '../ProjectSpecs/ProjectSpecs';
-
-const Img = styled('img')({
-  objectFit: 'cover',
-  width: '100%',
-  height: '100%',
-});
 
 const Item = styled(Paper)(({ theme }) => ({
   height: '25rem',

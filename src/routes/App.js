@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Link, Outlet, useLocation } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { useState, useLayoutEffect, useEffect } from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
@@ -15,7 +14,6 @@ import Verizon from "../components/Verizon/Verizon";
 import Optimize from "../components/Optimize/Optimize";
 import { RiSunFill, RiMoonClearFill } from "react-icons/ri";
 import { FiArrowUpCircle } from "react-icons/fi";
-import { AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 const PageLayout = ({ children }) => children;
@@ -100,26 +98,26 @@ function App() {
       <div className="mode-left white-text">
         <ul>
           <li>
-            <Link to="/"><span className="link-decoration">projects</span></Link>
+            <Link to="/user/mwzhang/"><span className="link-decoration">projects</span></Link>
           </li>
           <li>
-            <Link to="/about"><span className="link-decoration">about</span></Link>
+            <Link to="/user/mwzhang/about"><span className="link-decoration">about</span></Link>
           </li>
         </ul>
       </div>
       </section>
       <Routes>
         <Route element={<AnimationLayout />}>
-          <Route path="/" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/creative" element={<Creative />} />
-          <Route path="/meta" element={<Meta />} />
-          <Route path="/verizon" element={<Verizon />} />
-          <Route path="/schema" element={<Schema />} />
-          <Route path="/ripe" element={<Ripe />} />
-          <Route path="/awareai" element={<Awareai />} />
-          <Route path="/choosie" element={<Choosie />} />
-          <Route path="/optimize" element={<Optimize />} />
+          <Route path="/user/mwzhang" element={<Projects />} />
+          <Route path="/user/mwzhang/about" element={<About />} />
+          <Route path="/user/mwzhang/creative" element={<Creative />} />
+          <Route path="/user/mwzhang/meta" element={<Meta />} />
+          <Route path="/user/mwzhang/verizon" element={<Verizon />} />
+          <Route path="/user/mwzhang/schema" element={<Schema />} />
+          <Route path="/user/mwzhang/ripe" element={<Ripe />} />
+          <Route path="/user/mwzhang/awareai" element={<Awareai />} />
+          <Route path="/user/mwzhang/choosie" element={<Choosie />} />
+          <Route path="/user/mwzhang/optimize" element={<Optimize />} />
         </Route>
       </Routes>
       <Footer />

@@ -94,7 +94,7 @@ function Verizon() {
             <div className="about-links-container">
           <a
 							href="https://drive.google.com/file/d/1uQgq2zrmNxcYyVLbPgVpnbW1ori8xJsg/view"
-							target="_blank" rel="noopener noreferrer"><span className="about-link">final presentation </span>
+							target="_blank" rel="noopener noreferrer"><span className="mode-left white-text about-link">final presentation </span>
           </a>
           </div>
           </ItemText>

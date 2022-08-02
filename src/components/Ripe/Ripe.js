@@ -73,11 +73,9 @@ function Ripe() {
                 Users keep track of their grocery lists in the app and record what food they've thrown out, which subsequently helps the app
                 build a smarter, more personalized, grocery list for their next trip. 
                 <br></br> <br></br>
-                ripe! also helps users understand how to store food properly, which contributes
-                to consumer education and further decreases the possibility that consumers will need to throw food out
-                due to improper storage.
-                <br></br> <br></br>
-                Users also have the ability to search for a nearby food pantry to donate unused food at the end of the period.
+                ripe! also helps users understand how to store food properly, which decreases the possibility that consumers will need to throw food out
+                due to improper storage. Users also have the ability to search for a nearby food pantry 
+                to donate unused food at the end of the period.
                 <br></br> <br></br>
                 I created this             <span className="about-links-container">
             <a

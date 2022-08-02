@@ -81,11 +81,11 @@ function Schema() {
           <ItemText>
             <p> Schema Builder is an application that allows users to build dialog schema, 
                 which are then passed into models trained on a dataset for transfer learning. 
-                From September to December 2020, I designed and developed Schema Builder under 
-                the guidance of Shikib Mehri and Dr. Maxine Eskenazi (DialRC, Language Technologies Institute, CMU).
+                In Fall 2020, I designed and developed Schema Builder under 
+                the guidance of Shikib Mehri and Dr. Eskenazi (DialRC, Language Technologies Institute, CMU).
                 <br></br> <br></br>
                 The completed application allows users to drag and drop components 
-                and arrows to create a flowchart-style graph representing their schema diagram, 
+                to create a flowchart graph representing their schema diagram, 
                 and subsequently offers users the ability to test their dialog implementation 
                 by interacting with the system through a chatbox.
                 <br></br> <br></br>

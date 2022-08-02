@@ -33,7 +33,7 @@ function Meta() {
       <Grid container spacing={{ xs: 0, md: 0 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         <Grid item xs={4} sm={4} md={6}>
         <span className="proj-container">
-          <ProjectSpecs role="software engineering intern" skills="front end development, API integration, building data stores, metric fetching" tools="React / JavaScript, GraphQL"/>
+          <ProjectSpecs role="software engineering intern" skills="front end development, API integration, building data stores, metric fetching" tools="React / JavaScript, PHP, GraphQL"/>
         </span>
         </Grid>
         <Grid item xs={4} sm={8} md={6}>
@@ -47,7 +47,7 @@ function Meta() {
                 for their published videos on Facebook. 
                 <br></br> <br></br>
                 This project involved developing full stack line charts and tables, building data stores, 
-                and querying data through GraphQL.
+                and querying data through PHP and GraphQL.
                 <br></br> <br></br>
                 Please contact me if you'd like to learn more. Although I can't publish my work online, 
                 I'd be happy to chat with you about the role and project.

@@ -11,6 +11,7 @@ import Awareai from "../components/Awareai/Awareai";
 import { motion } from "framer-motion";
 import logo from "../images/logo.png";
 import Clock from "../components/Clock/Clock";
+import backToTop from "../images/back_to_top.png";
 import "./App.css";
 
 const PageLayout = ({ children }) => children;
@@ -100,7 +101,7 @@ function App() {
       <Footer />
       {showButton && (
         <button onClick={scrollToTop} className="back-to-top">
-          <img src={logo} alt="back to top" className="back-to-top-img" />
+          <img src={backToTop} alt="back to top" className="back-to-top-img" />
         </button>
       )}
       </div>

@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Michelle from "../../images/michelle.jpg";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import arrow from "../../images/arrow_about.png";
 
 const Img = styled('img')({
@@ -27,6 +27,8 @@ const ItemLeft = styled(Paper)(({ theme }) => ({
 const ItemRight = styled(Paper)(({ theme }) => ({
   backgroundColor: 'transparent',
   padding: theme.spacing(8),
+  paddingTop: theme.spacing(2),
+  paddingLeft: theme.spacing(8),
   textAlign: 'left',
   boxShadow: 'none',
   justifyContent: 'center',
@@ -51,6 +53,32 @@ const TypingAnimation = ({ text, speed = 150, className = "" }) => {
   return <span className={className}>{displayText}</span>;
 };
 
+// Staggered reveal component
+const FadeInSection = ({ children, className = "" }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const domRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setIsVisible(entry.isIntersecting));
+    });
+    
+    const { current } = domRef;
+    observer.observe(current);
+    
+    return () => observer.unobserve(current);
+  }, []);
+
+  return (
+    <div
+      ref={domRef}
+      className={`fade-in-section ${isVisible ? 'visible' : ''} ${className}`}
+    >
+      {children}
+    </div>
+  );
+};
+
 
 export default function About() {
     return (
@@ -64,50 +92,64 @@ export default function About() {
             </Grid>
             <Grid item xs={4} sm={8} md={6}>
               <ItemRight>
-                <h1>  
-                  <span className="about-title">
-                    hi, this is <TypingAnimation text="michelle!" speed={120} className="typing-text" />
-                  </span>
-                </h1>
+                <FadeInSection>
+                  <h1>  
+                    <span className="about-title">
+                      hi, this is <TypingAnimation text="michelle!" speed={120} className="typing-text" />
+                    </span>
+                  </h1>
+                </FadeInSection>
 
-                <div className="about-description"> 
-                  i'm a developer and aspiring product designer based in san francisco. 
-                  currently, i'm a fullstack software engineer at <a href="https://sentry.io/welcome/" target="_blank" rel="noopener noreferrer">sentry</a>.
-                  i graduated from carnegie mellon with a bachelors in computer science, a concentration in human-computer interaction,
-                  and a minor in business administration.
-                  <br></br><br></br>
-                  from my interdisciplinary background, i'm fascinated by the convergence of design
-                  and innovative computing, and how we can use this harmonization for positive social impact
-                  and human connection. i love working in cross-functional teams.
-                  <br></br><br></br>
-                  i'm a fan of trying weird recipes and making a mess in my kitchen, 
-                  hoarding little trinkets, making elaborate cheeseboards for gatherings i host,
-                  and capturing moments on camera. on the weekends, i also work as an 
-                  event facilitator at a <a href="https://thepuppysphere.com/" target="_blank" rel="noopener noreferrer">puppy yoga studio</a>!
-                </div>
-                <br></br><br></br>
-                <div class="connect-title">let's connect!<img src={arrow} alt="arrow" className="connect-arrow" /></div>
-                <div>
-                  <a
-                      href="https://drive.google.com/file/d/1kVJnEJxXGIqruOmKy7nTE9uqBL7spPap/view?usp=sharing"
-                      target="_blank" rel="noopener noreferrer"><span>resume</span>
-                  </a>
-                  <span> &nbsp; / &nbsp; </span>
-                  <a
-                      href="mailto:mwzhang@alumni.cmu.edu"
-                      target="_blank" rel="noopener noreferrer"><span>email</span>
-                  </a>
-                  <span> &nbsp; / &nbsp; </span>
-                  <a
-                      href="https://www.linkedin.com/in/michellezhang1015/"
-                      target="_blank" rel="noopener noreferrer"><span>linkedin</span>
-                  </a>
-                  <span> &nbsp; / &nbsp; </span>
-                  <a
-                      href="https://www.github.com/michellewzhang"
-                      target="_blank" rel="noopener noreferrer"><span>github</span>
-                  </a>
-                </div>
+                <FadeInSection>
+                  <div className="about-description"> 
+                    i'm a developer and aspiring product designer based in san francisco. 
+                    currently, i'm a fullstack software engineer at <a href="https://sentry.io/welcome/" target="_blank" rel="noopener noreferrer">sentry</a>.
+                    i graduated from carnegie mellon with a bachelors in computer science, a concentration in human-computer interaction,
+                    and a minor in business administration.
+                  </div>
+                </FadeInSection>
+
+                <FadeInSection>
+                  <div className="about-description"> 
+                    from my interdisciplinary background, i'm fascinated by the convergence of design
+                    and innovative computing, and how we can use this harmonization for positive social impact
+                    and human connection. i love working in cross-functional teams and mentoring others when i can.
+                  </div>
+                </FadeInSection>
+
+                <FadeInSection>
+                  <div className="about-description"> 
+                    i'm a fan of trying weird recipes and making a mess in my kitchen, 
+                    chasing my next running pr, making elaborate charcuterie boards for gatherings i host,
+                    and capturing moments on camera. on the weekends, i also work as an 
+                    event facilitator at a <a href="https://thepuppysphere.com/" target="_blank" rel="noopener noreferrer">puppy yoga studio</a>!
+                  </div>
+                </FadeInSection>
+
+                <FadeInSection>
+                  <div className="connect-title">let's connect!<img src={arrow} alt="arrow" className="connect-arrow" /></div>
+                  <div>
+                    <a
+                        href="https://drive.google.com/file/d/1kVJnEJxXGIqruOmKy7nTE9uqBL7spPap/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer"><span>resume</span>
+                    </a>
+                    <span> &nbsp; / &nbsp; </span>
+                    <a
+                        href="mailto:mwzhang@alumni.cmu.edu"
+                        target="_blank" rel="noopener noreferrer"><span>email</span>
+                    </a>
+                    <span> &nbsp; / &nbsp; </span>
+                    <a
+                        href="https://www.linkedin.com/in/michellezhang1015/"
+                        target="_blank" rel="noopener noreferrer"><span>linkedin</span>
+                    </a>
+                    <span> &nbsp; / &nbsp; </span>
+                    <a
+                        href="https://www.github.com/michellewzhang"
+                        target="_blank" rel="noopener noreferrer"><span>github</span>
+                    </a>
+                  </div>
+                </FadeInSection>
               </ItemRight>
             </Grid>
         </Grid>

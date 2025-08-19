@@ -1,0 +1,17 @@
+.play-title {
+    font-weight: bold;
+}
+
+.play-header {
+    margin: 2rem 2.5rem;
+    font-size: 1.2rem;
+    padding: 25px;
+    padding-left: 0;
+}
+
+.arrow {
+    width: 20px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }

@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import logo from "../images/logo.png";
 import Clock from "../components/Clock/Clock";
 import backToTop from "../images/back_to_top.png";
+import Play from "../components/Play/Play";
 import "./App.css";
 
 const PageLayout = ({ children }) => children;
@@ -84,7 +85,7 @@ function App() {
     <BrowserRouter>
     <Wrapper>
     <div>
-      <section className="container-mode">
+      <section>
       <Navigation />
       </section>
       <Routes>
@@ -96,6 +97,7 @@ function App() {
           <Route path="/ripe" element={<Ripe />} />
           <Route path="/awareai" element={<Awareai />} />
           <Route path="/choosie" element={<Choosie />} />
+          <Route path="/play" element={<Play />} />
         </Route>
       </Routes>
       <Footer />
@@ -129,6 +131,11 @@ const Navigation = () => {
           <li>
             <Link to="/" className={isActive("/") ? "active" : ""}>
               <span className="link-decoration">work</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/play" className={isActive("/play") ? "active" : ""}>
+              <span className="link-decoration">play</span>
             </Link>
           </li>
           <li>

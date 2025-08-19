@@ -4,7 +4,7 @@
 /* Logo styles */
 .logo {
   margin-left: 30px;
-  height: 10vh;
+  height: 80px;
   cursor: pointer;
 }
 
@@ -16,6 +16,7 @@
   justify-content: space-between;
   width: 100%;
   margin-top: 25px;
+  font-size: 1.1rem;
 }
 
 .navigation-left {

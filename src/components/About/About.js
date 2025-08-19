@@ -5,6 +5,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Michelle from "../../images/michelle.jpg";
 import { useState, useEffect } from 'react';
+import arrow from "../../images/arrow_about.png";
 
 const Img = styled('img')({
   height:'30rem',
@@ -55,50 +56,61 @@ export default function About() {
     return (
       <>
       <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={{ xs: 0, md: 0 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-          <Grid item xs={4} sm={8} md={6}>
-            <ItemLeft>
-            <Img src={Michelle}/>
-            </ItemLeft>
-          </Grid>
-          <Grid item xs={4} sm={8} md={6}>
-            <ItemRight>
-            <h1>  
-              <span className="header-about-title">
-                hi, this is <TypingAnimation text="michelle!" speed={120} className="typing-text" />
-              </span>
-            </h1>
-            <div className="header-about-description"> 
-          i'm a student at carnegie mellon, studying <b>computer science </b>
-          with a concentration in <b>human-computer interaction </b> and minor in business administration.
-          <br></br><br></br>
-          i'm fascinated by the convergence of design and innovative computing, 
-          and how we can use this harmonization for positive social impact.
-          i love working in interdisciplinary teams!
-          <br></br><br></br>
-          i'm a fan of trying weird recipes and making a mess in my kitchen, 
-          hoarding small plants, making elaborate cheeseboards for picnics,
-          and capturing moments on video.</div>
-          <br></br><br></br>
-          <div className="about-links-container">
-          <a
-							href="https://drive.google.com/file/d/1kVJnEJxXGIqruOmKy7nTE9uqBL7spPap/view?usp=sharing"
-							target="_blank" rel="noopener noreferrer"><span className="about-link">resume </span>
-          </a>
-          <span className="header-about-description"> &nbsp; / &nbsp; </span>
-          <a
-							href="mailto:mwzhang@andrew.cmu.edu"
-							target="_blank" rel="noopener noreferrer"><span className="about-link">email </span>
-          </a>
-          <span className="header-about-description"> &nbsp; / &nbsp; </span>
-          <a
-							href="https://www.linkedin.com/in/michellezhang1015/"
-							target="_blank" rel="noopener noreferrer"><span className="about-link">linkedin </span>
-          </a>
-          </div>
-            </ItemRight>
-          </Grid>
-      </Grid>
+        <Grid container spacing={{ xs: 0, md: 0 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+            <Grid item xs={4} sm={8} md={6}>
+              <ItemLeft>
+                <Img className="about-img" src={Michelle}/>
+              </ItemLeft>
+            </Grid>
+            <Grid item xs={4} sm={8} md={6}>
+              <ItemRight>
+                <h1>  
+                  <span className="about-title">
+                    hi, this is <TypingAnimation text="michelle!" speed={120} className="typing-text" />
+                  </span>
+                </h1>
+
+                <div className="about-description"> 
+                  i'm a developer and aspiring product designer based in san francisco. 
+                  currently, i'm a fullstack software engineer at <a href="https://sentry.io/welcome/" target="_blank" rel="noopener noreferrer">sentry</a>.
+                  i graduated from carnegie mellon with a bachelors in computer science, a concentration in human-computer interaction,
+                  and a minor in business administration.
+                  <br></br><br></br>
+                  from my interdisciplinary background, i'm fascinated by the convergence of design
+                  and innovative computing, and how we can use this harmonization for positive social impact
+                  and human connection. i love working in cross-functional teams.
+                  <br></br><br></br>
+                  i'm a fan of trying weird recipes and making a mess in my kitchen, 
+                  hoarding little trinkets, making elaborate cheeseboards for gatherings i host,
+                  and capturing moments on camera. on the weekends, i also work as an 
+                  event facilitator at a <a href="https://thepuppysphere.com/" target="_blank" rel="noopener noreferrer">puppy yoga studio</a>!
+                </div>
+                <br></br><br></br>
+                <div class="connect-title">let's connect!<img src={arrow} alt="arrow" className="connect-arrow" /></div>
+                <div>
+                  <a
+                      href="https://drive.google.com/file/d/1kVJnEJxXGIqruOmKy7nTE9uqBL7spPap/view?usp=sharing"
+                      target="_blank" rel="noopener noreferrer"><span>resume</span>
+                  </a>
+                  <span> &nbsp; / &nbsp; </span>
+                  <a
+                      href="mailto:mwzhang@alumni.cmu.edu"
+                      target="_blank" rel="noopener noreferrer"><span>email</span>
+                  </a>
+                  <span> &nbsp; / &nbsp; </span>
+                  <a
+                      href="https://www.linkedin.com/in/michellezhang1015/"
+                      target="_blank" rel="noopener noreferrer"><span>linkedin</span>
+                  </a>
+                  <span> &nbsp; / &nbsp; </span>
+                  <a
+                      href="https://www.github.com/michellewzhang"
+                      target="_blank" rel="noopener noreferrer"><span>github</span>
+                  </a>
+                </div>
+              </ItemRight>
+            </Grid>
+        </Grid>
     </Box>
     </>
     );

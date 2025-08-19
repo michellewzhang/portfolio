@@ -1,12 +1,16 @@
-.header-details {
-    font-size: 1.5rem;
-    font-weight: normal;
-    padding-top: 0.5rem;
-    background: var(--white);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+.project-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--highlight);
 }
+
+.project-description {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.project-details {
+    font-size: 1rem;
+    font-weight: normal;
+}
+

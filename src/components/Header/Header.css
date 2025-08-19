@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  margin: 2rem 2.5rem;
+  align-items: flex-start;
+}
+
+.header-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.header-description {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.header-arrow {
+  width: 20px;
+  margin-bottom: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* updated aug 2025 */

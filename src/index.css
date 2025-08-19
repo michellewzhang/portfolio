@@ -1,0 +1,24 @@
+:root {
+  --black: #383433;
+  --white: #ffffff;
+  --highlight: #FF695C;
+}
+
+body {
+  font-family: "Inconsolata", "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--black);
+  background-color: var(--white);
+  transition: 150ms;
+}
+
+a {
+  align-items: center;
+  color: var(--black);
+  text-decoration: none;
+}
+
+/* updated aug 2025 */

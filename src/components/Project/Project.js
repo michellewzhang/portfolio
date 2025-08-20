@@ -7,6 +7,7 @@ import ripe from "../../images/ripe/ripe1.png";
 import dialog from "../../images/dialog/dialog.png";
 import choosie from "../../images/choosie/choosie.png";
 import awareAI from "../../images/aware/awareai.png";
+import sentry from "../../images/sentry/sentry.png";
 import { Link, Outlet } from 'react-router-dom';
 
 const ImgCenter = styled('img')({
@@ -306,6 +307,18 @@ function Project() {
         
         <ProjectGrid>
           <Grid container spacing={{ xs: 2, sm: 3, md: 4 }} columns={{ xs: 4, sm: 8, md: 12 }} sx={{ width: '100%', maxWidth: '100%', overflow: 'hidden', padding: '0 0.5rem 0 1rem' }}>
+          <Grid item xs={4} sm={8} md={6}>
+              <FadeInSection immediate={true}>
+                <ProjectContainer>
+                  <Item>
+                    <Link to="/sentry" className="project-image-link">
+                      <ImgCenter src={sentry}/>
+                    </Link>
+                  </Item>
+                  <ProjectTitle>sentry - full stack development</ProjectTitle>
+                </ProjectContainer>
+              </FadeInSection>
+            </Grid>
             <Grid item xs={4} sm={8} md={6}>
               <FadeInSection immediate={true}>
                 <ProjectContainer>

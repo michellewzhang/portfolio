@@ -1,5 +1,4 @@
 import React from "react";
-import "./Ripe.css";
 import ripe_hero from "../../images/ripe/ripe_hero.png";
 import ripe1 from "../../images/ripe/ripe1.png";
 import ripe2 from "../../images/ripe/ripe2.png";

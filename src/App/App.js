@@ -5,6 +5,7 @@ import Footer from "../components/Footer/Footer";
 import Project from "../components/Project/Project";
 import About from "../components/About/About"; 
 import Ripe from "../components/Ripe/Ripe";
+import Sentry from "../components/Sentry/Sentry";
 import Schema from "../components/Schema/Schema";
 import Choosie from "../components/Choosie/Choosie";
 import Awareai from "../components/Awareai/Awareai";
@@ -93,11 +94,12 @@ function App() {
           <Route path="/" element={<Projects />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
+          <Route path="/play" element={<Play />} />
+          <Route path="/sentry" element={<Sentry />} />
           <Route path="/schema" element={<Schema />} />
           <Route path="/ripe" element={<Ripe />} />
           <Route path="/awareai" element={<Awareai />} />
           <Route path="/choosie" element={<Choosie />} />
-          <Route path="/play" element={<Play />} />
         </Route>
       </Routes>
       <Footer />

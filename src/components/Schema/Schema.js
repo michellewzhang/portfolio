@@ -62,7 +62,7 @@ function Schema() {
       <a href="https://github.com/michellewzhang/schema" target="_blank" rel="noopener noreferrer">
         <span className="highlight-link">github repo </span>
       </a>
-      <span className="header-about-description"> &nbsp; / &nbsp; </span>
+      <span> &nbsp; / &nbsp; </span>
       <a href="https://drive.google.com/file/d/1IN6RDCEs8KLbLBMYelfEsTRW67i29Dat/view" target="_blank" rel="noopener noreferrer">
         <span className="highlight-link">final paper </span>
       </a>

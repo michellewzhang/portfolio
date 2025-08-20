@@ -6,7 +6,8 @@ import {
   ProjectPage,
   ProjectOverview,
   LargeImage,
-  BodyText
+  BodyText,
+  TextImageSection,
 } from '../ProjectTemplate/ProjectTemplate';
 
 function Sentry() {
@@ -36,7 +37,7 @@ function Sentry() {
       </BodyText>
       <BodyText>I joined Sentry as a software engineer
       in July 2023 and have since worked on various high-impact features across the product, including Session Replay and
-      User Feedback. The most recent project I led was our AI Replay Summaries feature.
+      User Feedback. The most recent project I led was our AI Session Replay Summaries feature.
     </BodyText>
     <BodyText>
     Our code is completely open source; as a result, I interact directly with customers through GitHub often.
@@ -77,6 +78,44 @@ function Sentry() {
         src={sentry}
         alt="Sentry"
       />
+
+      <TextImageSection
+        title="AI Session Replay Summaries"
+        content={
+            <>
+          <BodyText>
+            Our Session Replay product is a frontend debugging tool that allows developers to playback
+            user sessions, to easily pinpoint what happened before, during, and after a user 
+            experienced an error. Recently, I led project work on our AI Replay Summaries feature,
+            which is an enhancement that allows users to quickly understand replays (which can be up to 
+            60 minutes long.)
+          </BodyText>
+          <BodyText>
+            This feature leverages an LLM to take in replay data and output a summary and "chapters" for the replay.
+            This project required fullstack work to build the backend endpoints, send data to the LLM, and display the results on the frontend.
+          </BodyText>
+          </>
+        }
+        image={{ src: undefined, alt: "AI Session Replay" }}
+      />
+
+        <TextImageSection
+        title="User Feedback"
+        content={
+            <>
+          <BodyText>
+            Sentry's User Feedback tool gives our customers the ability to collect feedback from users
+            at any time. My team developed a installable widget that can be embedded in any website, and
+            the feedback submitted gets routed back to Sentry. I worked on the frontend for User Feedback
+            and contributed to development of our AI spam detection feature, which helps filter out unhelpful
+            feedbacks.
+            </BodyText>
+            </>
+        }
+        image={{ src: undefined, alt: "User Feedback" }}
+        imagePosition="left"
+      />
+
     </ProjectPage>
   );
 }

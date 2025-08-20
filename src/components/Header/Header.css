@@ -4,6 +4,17 @@
   align-items: flex-start;
 }
 
+.header h1 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.header h1.header-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .header-title {
   font-size: 1.2rem;
   font-weight: bold;

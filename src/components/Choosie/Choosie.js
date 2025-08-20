@@ -249,7 +249,7 @@ function Choosie() {
             <span className="header-title">concept video</span>
         </section>
     <div className="video-container">
-        <iframe src="https://drive.google.com/file/d/11M-NxvHEifWwNrIgz3mdHEFiHnrmZINR/preview" frameborder="0" allow="autoplay" seamless=""></iframe>
+        <iframe title="choosie_video" src="https://drive.google.com/file/d/11M-NxvHEifWwNrIgz3mdHEFiHnrmZINR/preview" frameborder="0" allow="autoplay" seamless=""></iframe>
     </div>
   </>
   );

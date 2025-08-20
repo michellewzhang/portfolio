@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-import "./Project.css";
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -14,6 +13,7 @@ const Img = styled('img')({
   objectFit: 'cover',
   width: '100%',
   height: '100%',
+  borderRadius: '5px',
 });
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -35,7 +35,7 @@ const SideNav = styled('div')({
   gap: '1.5rem',
   
   '@media (max-width: 768px)': {
-    right: '1rem',
+    display: 'none',
   },
 });
 
@@ -47,6 +47,12 @@ const TocHeader = styled('div')({
   letterSpacing: '1px',
   transform: 'rotate(-30deg)',
   textAlign: 'center',
+  
+  '@media (max-width: 768px)': {
+    transform: 'none',
+    fontSize: '0.8rem',
+    marginBottom: '0.5rem',
+  },
 });
 
 const NavLink = styled('div')(({ active }) => ({
@@ -62,6 +68,20 @@ const NavLink = styled('div')(({ active }) => ({
   '&:hover': {
     color: 'var(--highlight)',
     transform: 'rotate(-30deg) translateX(-3px)',
+  },
+  
+  '@media (max-width: 768px)': {
+    transform: 'none',
+    fontSize: '0.8rem',
+    padding: '0.5rem 1rem',
+    backgroundColor: active ? 'rgba(255, 105, 92, 0.1)' : 'transparent',
+    borderRadius: '20px',
+    border: active ? '1px solid var(--highlight)' : '1px solid transparent',
+    
+    '&:hover': {
+      transform: 'none',
+      backgroundColor: 'rgba(255, 105, 92, 0.1)',
+    },
   },
 }));
 
@@ -89,11 +109,11 @@ const SectionTitle = styled('h2')({
   color: 'var(--black)',
   textAlign: 'left',
   opacity: 0.7,
-  marginLeft: '2rem',
+  marginLeft: '1.3rem',
   letterSpacing: '0.3px',
-  backgroundColor: 'rgba(255, 105, 92, 0.1)',
+  backgroundColor: 'var(--highlight-light)',
   padding: '0.4rem 0.8rem',
-  borderRadius: '16px',
+  borderRadius: '8px',
   display: 'inline-block',
   
   '@media (max-width: 768px)': {
@@ -103,22 +123,106 @@ const SectionTitle = styled('h2')({
 
 const SectionSubtitle = styled('p')({
   fontSize: '0.8rem',
-  color: 'var(--black)',
-  margin: '0.4rem 0 0 0',
-  opacity: 0.5,
+  color: 'rgba(0,0,0,0.4)',
   textAlign: 'left',
   fontWeight: '400',
-  letterSpacing: '0.2px',
   
   '@media (max-width: 768px)': {
     fontSize: '0.75rem',
   },
 });
 
+// Staggered reveal component
+const FadeInSection = ({ children, className = "", immediate = false }) => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const domRef = useRef();
+
+  useEffect(() => {
+    if (immediate) {
+      const timer = setTimeout(() => {
+        setHasAnimated(true);
+      }, 300);
+      return () => clearTimeout(timer);
+    } else {
+      // For scroll-triggered animations, use intersection observer
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          // Only animate if we haven't animated yet and element is visible
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            // Once animated, stop observing this element
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+      
+      const { current } = domRef;
+      observer.observe(current);
+      
+      return () => observer.unobserve(current);
+    }
+  }, [hasAnimated, immediate]);
+
+  return (
+    <FadeInSectionStyled
+      ref={domRef}
+      className={hasAnimated ? 'visible' : ''}
+    >
+      {children}
+    </FadeInSectionStyled>
+  );
+};
+
 const ProjectGrid = styled(Box)({
   display: "grid",
-  gridAutoColumns: "1fr",
-  gridAutoFlow: "column",
+  width: "100%",
+  maxWidth: "100%",
+  overflow: "hidden",
+});
+
+const ProjectContainer = styled('span')({
+  position: 'relative',
+  display: 'flex',
+  flexDirection: 'column',
+  
+  '& img': {
+    transition: 'opacity 0.3s ease',
+  },
+  
+  '&:hover img': {
+    opacity: 0.7,
+  },
+});
+
+const ProjectTitle = styled('p')({
+  fontSize: '0.8rem',
+  fontWeight: 500,
+  color: 'rgba(0,0,0,0.4)',
+  margin: 0,
+  lineHeight: 1.2,
+  marginTop: '0.8rem',
+  marginLeft: '0.3rem',
+  textAlign: 'left',
+  position: 'relative',
+  zIndex: 1,
+});
+
+// Fade-in animation styles
+const FadeInSectionStyled = styled('div')({
+  opacity: 0,
+  transform: 'translateY(20px)',
+  transition: 'all 0.8s ease',
+  marginBottom: '30px',
+  
+  '&.visible': {
+    opacity: 1,
+    transform: 'translateY(0)',
+  },
+  
+  '&:nth-child(1)': { transitionDelay: '0.3s' },
+  '&:nth-child(2)': { transitionDelay: '0.5s' },
+  '&:nth-child(3)': { transitionDelay: '0.7s' },
+  '&:nth-child(4)': { transitionDelay: '0.9s' },
 });
 
 function Project() {
@@ -152,7 +256,7 @@ function Project() {
 
   return (
     <>
-      {/* Sticky Side Navigation */}
+      {/* Responsive Navigation */}
       <SideNav>
         <TocHeader>Table of Contents</TocHeader>
         <NavLink 
@@ -177,20 +281,18 @@ function Project() {
         </SectionHeader>
         
         <ProjectGrid>
-          <Grid container spacing={{ xs: 0, md: 0 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-            <Grid item xs={4} sm={4} md={6}>
-              <span className="proj-container">
-                <Item>
-                  <Img src={dialog}/>
-                  <Link to="/schema">
-                    <span className="overlay">
-                      <span className="overlay-text-title">dialog schema builder
-                        <div className="overlay-text-description">full stack development</div>
-                      </span>
-                    </span>
-                  </Link>
-                </Item>
-              </span>
+          <Grid container spacing={{ xs: 2, sm: 3, md: 4 }} columns={{ xs: 4, sm: 8, md: 12 }} sx={{ width: '100%', maxWidth: '100%', overflow: 'hidden', padding: '0 0.5rem 0 1rem' }}>
+            <Grid item xs={4} sm={8} md={6}>
+              <FadeInSection immediate={true}>
+                <ProjectContainer>
+                  <Item>
+                    <Link to="/schema">
+                      <Img src={dialog}/>
+                    </Link>
+                  </Item>
+                  <ProjectTitle>dialog schema builder - full stack development</ProjectTitle>
+                </ProjectContainer>
+              </FadeInSection>
             </Grid>
           </Grid>
         </ProjectGrid>
@@ -204,48 +306,42 @@ function Project() {
         </SectionHeader>
         
         <ProjectGrid>
-          <Grid container spacing={{ xs: 0, md: 0 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-            <Grid item xs={4} sm={4} md={6}>
-              <span className="proj-container">
-                <Item>
-                  <Img src={choosie}/>
-                  <Link to="/choosie">
-                    <span className="overlay">
-                      <span className="overlay-text-title">choosie
-                        <div className="overlay-text-description">digital startup pitch</div>
-                      </span>
-                    </span>
-                  </Link>
-                </Item>
-              </span>
+          <Grid container spacing={{ xs: 2, sm: 3, md: 4 }} columns={{ xs: 4, sm: 8, md: 12 }} sx={{ width: '100%', maxWidth: '100%', overflow: 'hidden', padding: '0 0.5rem 0 1rem' }}>
+            <Grid item xs={4} sm={8} md={6}>
+              <FadeInSection>
+                <ProjectContainer>
+                  <Item>
+                    <Link to="/choosie">
+                      <Img src={choosie}/>
+                    </Link>
+                  </Item>
+                  <ProjectTitle>choosie - digital startup pitch</ProjectTitle>
+                </ProjectContainer>
+              </FadeInSection>
             </Grid>
-            <Grid item xs={4} sm={4} md={6}>
-              <span className="proj-container">
-                <Item>
-                  <Img src={ripe}/>
-                  <Link to="/ripe">
-                    <span className="overlay">
-                      <span className="overlay-text-title">ripe!
-                        <div className="overlay-text-description">app prototype</div>
-                      </span>
-                    </span>
-                  </Link>
-                </Item>
-              </span>
+            <Grid item xs={4} sm={8} md={6}>
+              <FadeInSection>
+                <ProjectContainer>
+                  <Item>
+                    <Link to="/awareai">
+                      <Img src={awareAI}/>
+                    </Link>
+                  </Item>
+                  <ProjectTitle>aware.ai - startup brand identity</ProjectTitle>
+                </ProjectContainer>
+              </FadeInSection>
             </Grid>
-            <Grid item xs={4} sm={4} md={6}>
-              <span className="proj-container">
-                <Item>
-                  <Img src={awareAI}/>
-                  <Link to="/awareai">
-                    <span className="overlay">
-                      <span className="overlay-text-title">aware.ai
-                        <div className="overlay-text-description">startup brand identity</div>
-                      </span>
-                    </span>
-                  </Link>
-                </Item>
-              </span>
+            <Grid item xs={4} sm={8} md={6}>
+              <FadeInSection>
+                <ProjectContainer>
+                  <Item>
+                    <Link to="/ripe">
+                      <Img src={ripe}/>
+                    </Link>
+                  </Item>
+                  <ProjectTitle>ripe! - app prototype</ProjectTitle>
+                </ProjectContainer>
+              </FadeInSection>
             </Grid>
           </Grid>
         </ProjectGrid>

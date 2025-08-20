@@ -1,8 +1,9 @@
 import './ProjectHeader.css';
 
 export default function ProjectHeader(props) {
+  
   return (
-    <section className="header">
+    <section className="project-header-section">
       <header>
         <h1>  
           <span className="project-title">{props.title}</span>

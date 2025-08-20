@@ -30,12 +30,6 @@
     100% { opacity: 1; }
 }
 
-.about-img {
-  border-radius: 3px;
-  max-width: 100%;
-  height: auto;
-}
-
 .about-title {
     font-size: 1.2rem;
     font-weight: bold;

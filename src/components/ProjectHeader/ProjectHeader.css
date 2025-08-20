@@ -1,15 +1,21 @@
-.project-title {
+.project-header-section {
+    display: flex;
+    margin: 1rem 2.5rem;
+    align-items: flex-start;
+}
+
+.project-header-section .project-title {
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--highlight);
 }
 
-.project-description {
+.project-header-section .project-description {
     font-size: 1.2rem;
     font-weight: normal;
 }
 
-.project-details {
+.project-header-section .project-details {
     font-size: 1rem;
     font-weight: normal;
 }

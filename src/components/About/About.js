@@ -8,15 +8,14 @@ import { useState, useEffect, useRef } from 'react';
 import arrow from "../../images/arrow_about.png";
 
 const Img = styled('img')({
-  height: 'auto',
   maxHeight: '30rem',
-  width: '100%',
+  width: 'auto',
+  height: 'auto',
   maxWidth: '100%',
   objectFit: 'contain',
-  paddingTop: '0rem',
-  display: 'block',
-  marginLeft: 'auto',
-  marginRight: 'auto',
+  borderRadius: '5px',
+  top: '50%',
+  left: '50%',
 });
 
 const ItemLeft = styled(Paper)(({ theme }) => ({
@@ -91,7 +90,7 @@ export default function About() {
         <Grid container spacing={{ xs: 0, md: 0 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             <Grid item xs={4} sm={8} md={6}>
               <ItemLeft>
-                <Img className="about-img" src={Michelle}/>
+                <Img src={Michelle}/>
               </ItemLeft>
             </Grid>
             <Grid item xs={4} sm={8} md={6}>

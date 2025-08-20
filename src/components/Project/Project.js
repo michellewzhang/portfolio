@@ -3,10 +3,10 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import ripe from "../../images/ripe1.png";
-import dialog from "../../images/dialog.png";
-import choosie from "../../images/choosie.png";
-import awareAI from "../../images/awareai.png";
+import ripe from "../../images/ripe/ripe1.png";
+import dialog from "../../images/dialog/dialog.png";
+import choosie from "../../images/choosie/choosie.png";
+import awareAI from "../../images/aware/awareai.png";
 import { Link, Outlet } from 'react-router-dom';
 
 const Img = styled('img')({

@@ -9,13 +9,13 @@ import {
   LargeImage,
   BodyText
 } from '../ProjectTemplate/ProjectTemplate';
-import dialog1 from "../../images/dialog1.png";
-import dialog2 from "../../images/dialog2.png";
-import dialog3 from "../../images/dialog3.png";
-import dialog4 from "../../images/dialog4.png";
-import dialog5 from "../../images/dialog5.png";
-import dialog_overview from "../../images/dialog_overview.png";
-import dialog_example from "../../images/dialog_example.png";
+import dialog1 from "../../images/dialog/dialog1.png";
+import dialog2 from "../../images/dialog/dialog2.png";
+import dialog3 from "../../images/dialog/dialog3.png";
+import dialog4 from "../../images/dialog/dialog4.png";
+import dialog5 from "../../images/dialog/dialog5.png";
+import dialog_overview from "../../images/dialog/dialog_overview.png";
+import dialog_example from "../../images/dialog/dialog_example.png";
 
 function Schema() {
   const header = (

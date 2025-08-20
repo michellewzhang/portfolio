@@ -1,10 +1,10 @@
 import React from "react";
 import "./Ripe.css";
-import ripe_hero from "../../images/ripe_hero.png";
-import ripe1 from "../../images/ripe1.png";
-import ripe2 from "../../images/ripe2.png";
-import ripe3 from "../../images/ripe3.png";
-import ripe4 from "../../images/ripe4.png";
+import ripe_hero from "../../images/ripe/ripe_hero.png";
+import ripe1 from "../../images/ripe/ripe1.png";
+import ripe2 from "../../images/ripe/ripe2.png";
+import ripe3 from "../../images/ripe/ripe3.png";
+import ripe4 from "../../images/ripe/ripe4.png";
 import ProjectHeader from '../ProjectHeader/ProjectHeader';
 import ProjectSpecs from '../ProjectSpecs/ProjectSpecs';
 import {

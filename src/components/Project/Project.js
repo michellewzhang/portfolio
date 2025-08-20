@@ -9,8 +9,25 @@ import choosie from "../../images/choosie/choosie.png";
 import awareAI from "../../images/aware/awareai.png";
 import { Link, Outlet } from 'react-router-dom';
 
-const Img = styled('img')({
+const ImgCenter = styled('img')({
   objectFit: 'cover',
+  objectPosition: 'center',
+  width: '100%',
+  height: '100%',
+  borderRadius: '5px',
+});
+
+const ImgLeft = styled('img')({
+  objectFit: 'cover',
+  objectPosition: 'left',
+  width: '100%',
+  height: '100%',
+  borderRadius: '5px',
+});
+
+const ImgRight = styled('img')({
+  objectFit: 'cover',
+  objectPosition: 'right',
   width: '100%',
   height: '100%',
   borderRadius: '5px',
@@ -294,7 +311,7 @@ function Project() {
                 <ProjectContainer>
                   <Item>
                     <Link to="/schema" className="project-image-link">
-                      <Img src={dialog}/>
+                      <ImgCenter src={dialog}/>
                     </Link>
                   </Item>
                   <ProjectTitle>dialog schema builder - full stack development</ProjectTitle>
@@ -319,7 +336,7 @@ function Project() {
                 <ProjectContainer>
                   <Item>
                     <Link to="/choosie" className="project-image-link">
-                      <Img src={choosie}/>
+                      <ImgLeft src={choosie}/>
                     </Link>
                   </Item>
                   <ProjectTitle>choosie - digital startup pitch</ProjectTitle>
@@ -331,7 +348,7 @@ function Project() {
                 <ProjectContainer>
                   <Item>
                     <Link to="/awareai" className="project-image-link">
-                      <Img src={awareAI}/>
+                      <ImgRight src={awareAI}/>
                     </Link>
                   </Item>
                   <ProjectTitle>aware.ai - startup brand identity</ProjectTitle>
@@ -343,7 +360,7 @@ function Project() {
                 <ProjectContainer>
                   <Item>
                     <Link to="/ripe" className="project-image-link">
-                      <Img src={ripe}/>
+                      <ImgCenter src={ripe}/>
                     </Link>
                   </Item>
                   <ProjectTitle>ripe! - app prototype</ProjectTitle>

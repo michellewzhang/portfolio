@@ -106,7 +106,7 @@ export default function About() {
                 <FadeInSection>
                   <div className="about-description"> 
                     i'm a developer and aspiring product designer based in san francisco. 
-                    currently, i'm a fullstack software engineer at <a href="https://sentry.io/welcome/" target="_blank" rel="noopener noreferrer">sentry</a>.
+                    currently, i'm a full stack software engineer at <a className="highlight-link" href="https://sentry.io/welcome/" target="_blank" rel="noopener noreferrer">sentry</a>.
                     i graduated from carnegie mellon with a bachelors in computer science, a concentration in human-computer interaction,
                     and a minor in business administration.
                   </div>
@@ -125,7 +125,7 @@ export default function About() {
                     i'm a fan of trying weird recipes and making a mess in my kitchen, 
                     chasing my next running pr, making elaborate charcuterie boards for gatherings i host,
                     and capturing moments on camera. on the weekends, i also work as an 
-                    event facilitator at a <a href="https://thepuppysphere.com/" target="_blank" rel="noopener noreferrer">puppy yoga studio</a>!
+                    event facilitator at a <a href="https://thepuppysphere.com/" className="highlight-link" target="_blank" rel="noopener noreferrer">puppy yoga studio</a>!
                   </div>
                 </FadeInSection>
 

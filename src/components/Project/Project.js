@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import ripe from "../../images/ripe.png";
+import ripe from "../../images/ripe1.png";
 import dialog from "../../images/dialog.png";
 import choosie from "../../images/choosie.png";
 import awareAI from "../../images/awareai.png";
@@ -87,37 +87,40 @@ const NavLink = styled('div')(({ active }) => ({
 
 const SectionContainer = styled('div')({
   marginBottom: '1rem',
-  paddingTop: '2rem',
-});
-
-const FirstSectionContainer = styled('div')({
-  marginBottom: '1rem',
 });
 
 const SectionHeader = styled('span')({
-  paddingLeft: '0',
+  padding: '0',
   marginLeft: '0',
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
   gap: '10px',
+  transition: 'all 0.3s ease',
 });
 
-const SectionTitle = styled('h2')({
-  fontSize: '1.1rem',
-  fontWeight: '500',
+const SectionTitle = styled('h1')({
+  fontSize: '1rem',
   color: 'var(--black)',
+  fontWeight: '450',
   textAlign: 'left',
-  opacity: 0.7,
+  opacity: 0.6,
   marginLeft: '1.3rem',
   letterSpacing: '0.3px',
-  backgroundColor: 'var(--highlight-light)',
-  padding: '0.4rem 0.8rem',
-  borderRadius: '8px',
+  background: 'linear-gradient(135deg, var(--highlight-light) 20%, var(--white) 100%)',
+  padding: '0.6rem 1.2rem',
+  borderRadius: '5px',
   display: 'inline-block',
+  transition: 'all 0.3s ease',
+  
+  '&:hover ~ .section-subtitle': {
+    opacity: 1,
+    transform: 'translateX(20px)',
+  },
   
   '@media (max-width: 768px)': {
     fontSize: '1rem',
+    padding: '0.5rem 1rem',
   },
 });
 
@@ -126,6 +129,10 @@ const SectionSubtitle = styled('p')({
   color: 'rgba(0,0,0,0.4)',
   textAlign: 'left',
   fontWeight: '400',
+  transition: 'all 0.3s ease',
+  margin: 0,
+  opacity: 0,
+  transform: 'translateX(0)',
   
   '@media (max-width: 768px)': {
     fontSize: '0.75rem',
@@ -200,7 +207,7 @@ const ProjectTitle = styled('p')({
   color: 'rgba(0,0,0,0.4)',
   margin: 0,
   lineHeight: 1.2,
-  marginTop: '0.8rem',
+  marginTop: '0.4rem',
   marginLeft: '0.3rem',
   textAlign: 'left',
   position: 'relative',
@@ -212,7 +219,7 @@ const FadeInSectionStyled = styled('div')({
   opacity: 0,
   transform: 'translateY(20px)',
   transition: 'all 0.8s ease',
-  marginBottom: '30px',
+  marginBottom: '10px',
   
   '&.visible': {
     opacity: 1,
@@ -274,10 +281,10 @@ function Project() {
       </SideNav>
 
       {/* Section 1 - dev */}
-      <FirstSectionContainer ref={developmentRef}>
+      <SectionContainer ref={developmentRef}>
         <SectionHeader>
           <SectionTitle>development</SectionTitle>
-          <SectionSubtitle>code-based work</SectionSubtitle>
+          <SectionSubtitle className="section-subtitle">code-based work</SectionSubtitle>
         </SectionHeader>
         
         <ProjectGrid>
@@ -286,7 +293,7 @@ function Project() {
               <FadeInSection immediate={true}>
                 <ProjectContainer>
                   <Item>
-                    <Link to="/schema">
+                    <Link to="/schema" className="project-image-link">
                       <Img src={dialog}/>
                     </Link>
                   </Item>
@@ -296,13 +303,13 @@ function Project() {
             </Grid>
           </Grid>
         </ProjectGrid>
-      </FirstSectionContainer>
+      </SectionContainer>
 
       {/* Section 2 - design */}
       <SectionContainer ref={designRef}>
         <SectionHeader>
           <SectionTitle>design & research</SectionTitle>
-          <SectionSubtitle>creative & exploratory work</SectionSubtitle>
+          <SectionSubtitle className="section-subtitle">creative & exploratory work</SectionSubtitle>
         </SectionHeader>
         
         <ProjectGrid>
@@ -311,7 +318,7 @@ function Project() {
               <FadeInSection>
                 <ProjectContainer>
                   <Item>
-                    <Link to="/choosie">
+                    <Link to="/choosie" className="project-image-link">
                       <Img src={choosie}/>
                     </Link>
                   </Item>
@@ -323,7 +330,7 @@ function Project() {
               <FadeInSection>
                 <ProjectContainer>
                   <Item>
-                    <Link to="/awareai">
+                    <Link to="/awareai" className="project-image-link">
                       <Img src={awareAI}/>
                     </Link>
                   </Item>
@@ -335,7 +342,7 @@ function Project() {
               <FadeInSection>
                 <ProjectContainer>
                   <Item>
-                    <Link to="/ripe">
+                    <Link to="/ripe" className="project-image-link">
                       <Img src={ripe}/>
                     </Link>
                   </Item>

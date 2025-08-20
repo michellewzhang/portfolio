@@ -2,7 +2,7 @@
   --black: #383433;
   --white: #ffffff;
   --highlight: #FF695C;
-  --highlight-light: #ff6a5c31;
+  --highlight-light: #ff6a5c47;
 }
 
 body {
@@ -31,4 +31,63 @@ a {
   color: var(--black);
   text-decoration: none;
   transition: color 0.3s ease;
+  position: relative;
+}
+
+a:hover {
+  color: var(--highlight);
+}
+
+/* Universal link underline animation */
+a::after,
+.link-decoration::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  bottom: -2px;
+  left: 0;
+  background: var(--highlight);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 2px;
+}
+
+a:hover::after,
+.link-decoration:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+a::before,
+.link-decoration::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.8px;
+  bottom: -1px;
+  left: 0;
+  background: var(--highlight);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0.6;
+  border-radius: 1px;
+}
+
+a:hover::before,
+.link-decoration:hover::before {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* Exclude project image links from underline animation */
+a.project-image-link::after,
+a.project-image-link::before {
+  display: none;
+}
+
+.highlight-link {
+  color: var(--highlight);
 }

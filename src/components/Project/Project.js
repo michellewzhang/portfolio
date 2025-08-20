@@ -312,7 +312,7 @@ function Project() {
                 <ProjectContainer>
                   <Item>
                     <Link to="/sentry" className="project-image-link">
-                      <ImgCenter src={sentry}/>
+                      <ImgRight src={sentry}/>
                     </Link>
                   </Item>
                   <ProjectTitle>sentry - full stack development</ProjectTitle>
@@ -324,7 +324,7 @@ function Project() {
                 <ProjectContainer>
                   <Item>
                     <Link to="/schema" className="project-image-link">
-                      <ImgCenter src={dialog}/>
+                      <ImgRight src={dialog}/>
                     </Link>
                   </Item>
                   <ProjectTitle>dialog schema builder - full stack development</ProjectTitle>

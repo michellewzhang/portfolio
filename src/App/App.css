@@ -30,6 +30,24 @@
   margin-right: 30px;
 }
 
+/* Responsive navigation wrapping */
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .navigation-left {
+    align-self: flex-start;
+  }
+  
+  .navigation-right {
+    align-self: flex-end;
+    margin-right: 0;
+  }
+}
+
 .navigation ul {
   display: flex;
   list-style: none;
@@ -141,5 +159,3 @@
   transform: translateY(-2px) scale(0.95);
   transition: all 0.1s ease;
 }
-
-/* updated aug 2025 */

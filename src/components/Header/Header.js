@@ -14,5 +14,3 @@ export default function Header() {
     </section>
   );
 }
-
-// updated aug 2025

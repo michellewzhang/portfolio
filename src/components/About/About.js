@@ -8,7 +8,11 @@ import { useState, useEffect, useRef } from 'react';
 import arrow from "../../images/arrow_about.png";
 
 const Img = styled('img')({
-  height:'30rem',
+  height: 'auto',
+  maxHeight: '30rem',
+  width: '100%',
+  maxWidth: '100%',
+  objectFit: 'contain',
   paddingTop: '0rem',
   display: 'block',
   marginLeft: 'auto',
@@ -142,11 +146,6 @@ export default function About() {
                     <a
                         href="https://www.linkedin.com/in/michellezhang1015/"
                         target="_blank" rel="noopener noreferrer"><span>linkedin</span>
-                    </a>
-                    <span> &nbsp; / &nbsp; </span>
-                    <a
-                        href="https://www.github.com/michellewzhang"
-                        target="_blank" rel="noopener noreferrer"><span>github</span>
                     </a>
                   </div>
                 </FadeInSection>

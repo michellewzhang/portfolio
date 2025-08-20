@@ -20,7 +20,9 @@ export default function Header() {
         <h1 className={isVisible ? 'header-fade-in' : ''}>  
           <span className="header-title">michelle zhang</span>
           <img className="header-arrow"src={arrow} alt="arrow" />
-          <span className="header-description">developer & designer based in san francisco.</span>
+          <span className="header-description">developer & designer based in san francisco. 
+            currently swe @ <a href="https://sentry.io/welcome/" target="_blank" rel="noopener noreferrer" className="highlight-link">
+            sentry</a>.</span>
         </h1>
       </header>
     </section>

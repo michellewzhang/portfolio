@@ -2,12 +2,21 @@ import React from "react";
 import ProjectHeader from '../ProjectHeader/ProjectHeader';
 import ProjectSpecs from '../ProjectSpecs/ProjectSpecs';
 import sentry from "../../images/sentry/sentry.png";
+import feedback from "../../images/sentry/feedback.png";
+import mobilereplay from "../../images/sentry/mobilereplay.png";
+import mobilereplay2 from "../../images/sentry/mobilereplay2.png";
+import flags from "../../images/sentry/flags.png";
+import insights from "../../images/sentry/insights.png";
+import aisummary from "../../images/sentry/aisummary.png";
+import onboarding from "../../images/sentry/onboarding.gif";
 import {
   ProjectPage,
   ProjectOverview,
   LargeImage,
   BodyText,
+  TextSection,
   TextImageSection,
+  ImageGallery,
 } from '../ProjectTemplate/ProjectTemplate';
 
 function Sentry() {
@@ -66,6 +75,11 @@ function Sentry() {
       </>
     );
 
+    const mobileImgs = [
+        { src: mobilereplay, alt: "Mobile replay" },
+        { src: mobilereplay2, alt: "Mobile breadcrumbs" },
+      ];
+
   return (
     <ProjectPage header={header}>
       <ProjectOverview 
@@ -96,10 +110,10 @@ function Sentry() {
           </BodyText>
           </>
         }
-        image={{ src: undefined, alt: "AI Session Replay" }}
+        image={{ src: aisummary, alt: "AI Session Replay" }}
       />
 
-        <TextImageSection
+        <TextSection
         title="user feedback"
         content={
             <>
@@ -116,11 +130,14 @@ function Sentry() {
             </BodyText>
             </>
         }
-        image={{ src: undefined, alt: "User Feedback" }}
-        imagePosition="left"
       />
 
-    <TextImageSection
+      <LargeImage
+        src={feedback}
+        alt="User Feedback"
+      />
+
+    <TextSection
         title="mobile session replay"
         content={
             <>
@@ -139,11 +156,11 @@ function Sentry() {
             </BodyText>
             </>
         }
-        image={{ src: undefined, alt: "Mobile Session Replay" }}
-        imagePosition="right"
       />
 
-    <TextImageSection
+      <ImageGallery images={mobileImgs} columns={2}/>
+
+    <TextSection
         title="feature flags"
         content={
             <>
@@ -159,8 +176,11 @@ function Sentry() {
             </BodyText>
             </>
         }
-        image={{ src: undefined, alt: "Feature Flags" }}
-        imagePosition="left"
+      />
+
+    <LargeImage
+        src={flags}
+        alt="Feature Flags"
       />
 
 
@@ -182,7 +202,7 @@ function Sentry() {
             </BodyText>
             </>
         }
-        image={{ src: undefined, alt: "Session Health Insights" }}
+        image={{ src: insights, alt: "Session Health Insights" }}
         imagePosition="right"
       />
 
@@ -204,7 +224,7 @@ function Sentry() {
             </BodyText>
             </>
         }
-        image={{ src: undefined, alt: "Onboarding" }}
+        image={{ src: onboarding, alt: "Onboarding" }}
         imagePosition="left"
       />
 

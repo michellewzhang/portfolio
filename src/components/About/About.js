@@ -142,7 +142,7 @@ export default function About() {
                   <div className="connect-title">let's connect!<img src={arrow} alt="arrow" className="connect-arrow" /></div>
                   <div>
                     <a
-                        href="https://drive.google.com/file/d/1kVJnEJxXGIqruOmKy7nTE9uqBL7spPap/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1Z4FkAbLTzxAMG3K5KDyqJPRlqfhD0Q2i/view?usp=sharing"
                         target="_blank" rel="noopener noreferrer"><span>resume</span>
                     </a>
                     <span> &nbsp; / &nbsp; </span>

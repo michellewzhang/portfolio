@@ -3,12 +3,12 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import Michelle from "../../images/michelle.jpg";
+import Michelle from "../../images/michelle.png";
 import { useState, useEffect, useRef } from 'react';
 import arrow from "../../images/arrow_about.png";
 
 const Img = styled('img')({
-  maxHeight: '30rem',
+  maxHeight: '40rem',
   width: 'auto',
   height: 'auto',
   maxWidth: '100%',
@@ -22,6 +22,7 @@ const ItemLeft = styled(Paper)(({ theme }) => ({
   backgroundColor: 'transparent',
   padding: theme.spacing(5),
   marginBottom: 0,
+  paddingTop: 0,
   paddingBottom: 0,
   textAlign: 'center',
   boxShadow: 'none',
@@ -114,7 +115,8 @@ export default function About() {
                 <FadeInSection>
                   <div className="about-description"> 
                     i'm a developer & aspiring product designer based in san francisco. 
-                    i graduated from carnegie mellon with a bachelors in computer science, a concentration in human-computer interaction,
+                    i graduated from <a className="highlight-link" href="https://www.cs.cmu.edu/" target="_blank" rel="noopener noreferrer">
+                    carnegie mellon</a> with a bachelors in computer science, a concentration in human-computer interaction,
                     and a minor in business administration.
                   </div>
                 </FadeInSection>

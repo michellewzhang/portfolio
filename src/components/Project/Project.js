@@ -60,7 +60,7 @@ const SideNav = styled('div')({
 const TocHeader = styled('div')({
   fontSize: '0.7rem',
   fontWeight: '600',
-  color: 'rgba(0,0,0,0.6)',
+  color: 'var(--black)',
   textTransform: 'uppercase',
   letterSpacing: '1px',
   transform: 'rotate(-30deg)',
@@ -76,7 +76,7 @@ const TocHeader = styled('div')({
 const NavLink = styled('div')(({ active }) => ({
   fontSize: '0.75rem',
   fontWeight: active ? '500' : '400',
-  color: active ? 'var(--highlight)' : 'rgba(0,0,0,0.4)',
+  color: active ? 'var(--highlight)' : 'var(--grey)',
   cursor: 'pointer',
   transition: 'all 0.3s ease',
   textTransform: 'uppercase',
@@ -86,20 +86,6 @@ const NavLink = styled('div')(({ active }) => ({
   '&:hover': {
     color: 'var(--highlight)',
     transform: 'rotate(-30deg) translateX(-3px)',
-  },
-  
-  '@media (max-width: 768px)': {
-    transform: 'none',
-    fontSize: '0.8rem',
-    padding: '0.5rem 1rem',
-    backgroundColor: active ? 'rgba(255, 105, 92, 0.1)' : 'transparent',
-    borderRadius: '20px',
-    border: active ? '1px solid var(--highlight)' : '1px solid transparent',
-    
-    '&:hover': {
-      transform: 'none',
-      backgroundColor: 'rgba(255, 105, 92, 0.1)',
-    },
   },
 }));
 
@@ -144,7 +130,7 @@ const SectionTitle = styled('h1')({
 
 const SectionSubtitle = styled('p')({
   fontSize: '0.8rem',
-  color: 'rgba(0,0,0,0.4)',
+  color: 'var(--grey)',
   textAlign: 'left',
   fontWeight: '400',
   transition: 'all 0.3s ease',
@@ -222,7 +208,7 @@ const ProjectContainer = styled('span')({
 const ProjectTitle = styled('p')({
   fontSize: '0.8rem',
   fontWeight: 500,
-  color: 'rgba(0,0,0,0.4)',
+  color: 'var(--grey)',
   margin: 0,
   lineHeight: 1.2,
   marginTop: '0.4rem',

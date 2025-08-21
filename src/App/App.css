@@ -74,7 +74,6 @@
 .navigation a.active {
   color: var(--highlight);
   font-weight: 500;
-  text-shadow: 0 0 20px rgba(135, 135, 250, 0.1);
 }
 
 .navigation .link-decoration {
@@ -84,13 +83,11 @@
 /* Active link underline effects */
 .navigation a.active .link-decoration::after {
   transform: scaleX(1);
-  box-shadow: 0 0 8px rgba(135, 135, 250, 0.3);
 }
 
 .navigation a.active .link-decoration::before {
   transform: scaleX(1);
   opacity: 1;
-  box-shadow: 0 0 4px rgba(135, 135, 250, 0.2);
 }
 
 /* Back to top button */

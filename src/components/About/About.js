@@ -104,9 +104,16 @@ export default function About() {
                 </FadeInSection>
 
                 <FadeInSection>
+                  <div className="about-description-small"> 
+                   ✣ full stack software engineer at <a className="highlight-link" href="https://sentry.io/welcome/" target="_blank" rel="noopener noreferrer">sentry</a>
+                   <br></br>
+                   ✣ based in sf, raised in ny, born in pa!
+                  </div>
+                </FadeInSection>
+
+                <FadeInSection>
                   <div className="about-description"> 
-                    i'm a developer and aspiring product designer based in san francisco. 
-                    currently, i'm a full stack software engineer at <a className="highlight-link" href="https://sentry.io/welcome/" target="_blank" rel="noopener noreferrer">sentry</a>.
+                    i'm a developer & aspiring product designer based in san francisco. 
                     i graduated from carnegie mellon with a bachelors in computer science, a concentration in human-computer interaction,
                     and a minor in business administration.
                   </div>
@@ -139,7 +146,7 @@ export default function About() {
                     <span> &nbsp; / &nbsp; </span>
                     <a
                         href="mailto:mwzhang@alumni.cmu.edu"
-                        target="_blank" rel="noopener noreferrer"><span>email</span>
+                        target="_blank" rel="noopener noreferrer"><span>say hi</span>
                     </a>
                     <span> &nbsp; / &nbsp; </span>
                     <a

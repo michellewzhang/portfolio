@@ -25,7 +25,7 @@ function Ripe() {
 
   const specs = (
     <ProjectSpecs 
-      role="UX designer" 
+      role="UI designer" 
       skills="user interface design, rapid prototyping" 
       tools="Figma"
     />

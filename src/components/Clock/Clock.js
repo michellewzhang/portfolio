@@ -46,7 +46,7 @@ const Clock = () => {
     >
       <img src={illustration} alt="illustration" className="illustration" />
       <div className="time">{formatTime(time)}</div>
-      <div className="timezone">in san francisco</div>
+      <div className="timezone">in california</div>
     </div>
   );
 };

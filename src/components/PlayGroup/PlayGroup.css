@@ -62,8 +62,8 @@
 
 @media (max-width: 480px) {
   .play-group-gallery {
-    grid-template-columns: 1fr;
-    gap: 6px;
+    grid-template-columns: repeat(var(--columns, 3), 1fr);
+    gap: 4px;
   }
   
   .play-group {
@@ -75,7 +75,7 @@
   }
   
   .play-group-image-container.main-photo {
-    grid-column: 1;
-    grid-row: 1;
+    grid-column: span 2;
+    grid-row: span 2;
   }
 }

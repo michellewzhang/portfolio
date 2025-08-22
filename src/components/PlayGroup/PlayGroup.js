@@ -1,7 +1,7 @@
 import React from 'react';
 import './PlayGroup.css';
 
-const PlayGroup = ({ images, columns = 3, gap = '8px', mainPhotoIndex = null }) => {
+const PlayGroup = ({ images, columns = 3, gap = '8px', mainPhotoIndices = [] }) => {
   return (
     <div className="play-group">
       <div 
@@ -15,7 +15,7 @@ const PlayGroup = ({ images, columns = 3, gap = '8px', mainPhotoIndex = null }) 
           <div 
             key={index} 
             className={`play-group-image-container ${
-              mainPhotoIndex === index ? 'main-photo' : ''
+              mainPhotoIndices.includes(index) ? 'main-photo' : ''
             }`}
           >
             <img

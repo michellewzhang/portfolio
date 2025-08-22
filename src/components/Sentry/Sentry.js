@@ -3,11 +3,11 @@ import ProjectHeader from '../ProjectHeader/ProjectHeader';
 import ProjectSpecs from '../ProjectSpecs/ProjectSpecs';
 import sentry from "../../images/sentry/sentry.png";
 import feedback from "../../images/sentry/feedback.png";
-import mobilereplay from "../../images/sentry/mobilereplay.png";
-import mobilereplay2 from "../../images/sentry/mobilereplay2.png";
+import mobilereplay from "../../images/sentry/mobile_replay.png";
+import mobilereplay2 from "../../images/sentry/mobile_replay_2.png";
 import flags from "../../images/sentry/flags.png";
 import insights from "../../images/sentry/insights.png";
-import aisummary from "../../images/sentry/aisummary.png";
+import aisummary from "../../images/sentry/ai_summary.png";
 import onboarding from "../../images/sentry/onboarding.gif";
 import {
   ProjectPage,

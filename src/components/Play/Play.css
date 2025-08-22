@@ -23,3 +23,15 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+
+.play-groups-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.play-groups-container.play-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+

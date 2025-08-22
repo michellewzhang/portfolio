@@ -63,15 +63,6 @@
 @media (max-width: 480px) {
   .play-group-gallery {
     grid-template-columns: repeat(var(--columns, 3), 1fr);
-    gap: 4px;
-  }
-  
-  .play-group {
-    padding: 0 0.5rem;
-  }
-  
-  .play-groups-container {
-    padding: 0 0.5rem;
   }
   
   .play-group-image-container.main-photo {

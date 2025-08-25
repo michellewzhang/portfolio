@@ -128,6 +128,10 @@ function Sentry() {
             feedbacks. Additionally, I worked on powering external issue linking (e.g. Jira, Linear, GitHub)
             with Sentry feedbacks.
             </BodyText>
+            <BodyText><a href="https://blog.sentry.io/introducing-screenshots-and-spam-detection-to-user-feedback/" target="_blank" rel="noopener noreferrer" className="highlight-link">
+              blog post
+            </a>
+            </BodyText>
             </>
         }
       />
@@ -153,6 +157,10 @@ function Sentry() {
             <BodyText>
             Since its release in January 2025, mobile session replay has been adopted 
             by over 1700 orgs.
+            </BodyText>
+            <BodyText><a href="https://blog.sentry.io/session-replay-for-mobile-is-now-generally-available-see-what-your-users-see/" target="_blank" rel="noopener noreferrer" className="highlight-link">
+              blog post
+            </a>
             </BodyText>
             </>
         }
@@ -199,6 +207,10 @@ function Sentry() {
             that shows the rate of users experiencing sessions ending in a crash; a chart that shows the percentage breakdown
             of sessions that were healthy, abormal, errored, and crashed; a chart mapping release adoption for recent mobile releases; 
             and a chart showing the number of new issues per release.
+            </BodyText>
+            <BodyText><a href="https://blog.sentry.io/introducing-session-health-in-sentry-now-in-open-beta/" target="_blank" rel="noopener noreferrer" className="highlight-link">
+              blog post
+            </a>
             </BodyText>
             </>
         }

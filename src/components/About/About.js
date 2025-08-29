@@ -59,24 +59,28 @@ const TypingAnimation = ({ text, speed = 150, className = "" }) => {
 
 // Staggered reveal component
 const FadeInSection = ({ children, className = "" }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const domRef = useRef();
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setIsVisible(entry.isIntersecting));
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+        }
+      });
     });
     
     const { current } = domRef;
     observer.observe(current);
     
     return () => observer.unobserve(current);
-  }, []);
+  }, [hasAnimated]);
 
   return (
     <div
       ref={domRef}
-      className={`fade-in-section ${isVisible ? 'visible' : ''} ${className}`}
+      className={`fade-in-section ${hasAnimated ? 'visible' : ''} ${className}`}
     >
       {children}
     </div>

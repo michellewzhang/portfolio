@@ -22,7 +22,6 @@ const PlayGroup = ({ images, columns = 3, gap = '8px', mainPhotoIndices = [] }) 
               src={image.src}
               alt={image.alt || `Image ${index + 1}`}
               className="play-group-image"
-              loading="lazy"
             />
           </div>
         ))}

@@ -60,7 +60,7 @@ export default function Play() {
           images={birthdayImages}
           columns={1}
           gap="8px"
-          mainPhotoIndices={[]}
+          mainPhotoIndices={[0]}
         />
         <PlayGroup 
           images={photoImages}

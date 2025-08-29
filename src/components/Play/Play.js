@@ -6,6 +6,7 @@ import PlayGroup from "../PlayGroup/PlayGroup";
 
 import { stickerImages } from "./stickerImages";
 import { photoImages } from "./photoImages";
+import { birthdayImages } from "./birthdayImages";
 
 export default function Play() {
   const [isVisible, setIsVisible] = useState(false);
@@ -51,6 +52,12 @@ export default function Play() {
       <div className={`play-groups-container ${isVisible ? 'play-fade-in' : ''}`}>
         <PlayGroup 
           images={stickerImages}
+          columns={2}
+          gap="8px"
+          mainPhotoIndices={[0]}
+        />
+        <PlayGroup 
+          images={birthdayImages}
           columns={2}
           gap="8px"
           mainPhotoIndices={[0]}

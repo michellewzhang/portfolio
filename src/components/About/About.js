@@ -85,15 +85,34 @@ const FadeInSection = ({ children, className = "" }) => {
 
 
 export default function About() {
-    return (
-      <>
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={{ xs: 0, md: 0 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-            <Grid item xs={4} sm={8} md={6}>
-              <ItemLeft>
-                <Img src={Michelle}/>
-              </ItemLeft>
-            </Grid>
+  const [, setImageLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Preload the main image
+    const img = new Image();
+    img.onload = () => {
+      setImageLoaded(true);
+      // Trigger fade-in after image is loaded
+      setTimeout(() => {
+        setIsVisible(true);
+      }, 100);
+    };
+    img.src = Michelle;
+  }, []);
+
+  return (
+    <>
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={{ xs: 0, md: 0 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+          <Grid item xs={4} sm={8} md={6}>
+            <ItemLeft>
+              <Img 
+                src={Michelle}
+                className={isVisible ? 'about-image-fade-in' : 'about-image-hidden'}
+              />
+            </ItemLeft>
+          </Grid>
             <Grid item xs={4} sm={8} md={6}>
               <ItemRight>
                 <FadeInSection>

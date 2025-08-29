@@ -115,7 +115,7 @@ export default function About() {
           </Grid>
             <Grid item xs={4} sm={8} md={6}>
               <ItemRight>
-                {imageLoaded && (
+                {imageLoaded ? (
                   <>
                     <FadeInSection>
                       <h1>  
@@ -179,6 +179,8 @@ export default function About() {
                       </div>
                     </FadeInSection>
                   </>
+                ) : (
+                  <div className="about-placeholder" style={{ height: '600px' }}></div>
                 )}
               </ItemRight>
             </Grid>

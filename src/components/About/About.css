@@ -88,3 +88,9 @@
   transform: translateY(0);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
+/* Placeholder for content loading */
+.about-placeholder {
+  width: 100%;
+  background: transparent;
+}

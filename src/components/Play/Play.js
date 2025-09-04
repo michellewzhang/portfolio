@@ -6,7 +6,7 @@ import PlayGroup from "../PlayGroup/PlayGroup";
 
 import { stickerImages } from "./stickerImages";
 import { photoImages } from "./photoImages";
-import { birthdayImages } from "./birthdayImages";
+import { snoopyImages } from "./snoopyImages";
 
 export default function Play() {
   const [isVisible, setIsVisible] = useState(false);
@@ -56,11 +56,11 @@ export default function Play() {
           gap="8px"
           mainPhotoIndices={[0]}
         />
-        <PlayGroup 
-          images={birthdayImages}
+      <PlayGroup 
+          images={snoopyImages}
           columns={2}
           gap="8px"
-          mainPhotoIndices={[0]}
+          mainPhotoIndices={[2]}
         />
         <PlayGroup 
           images={photoImages}

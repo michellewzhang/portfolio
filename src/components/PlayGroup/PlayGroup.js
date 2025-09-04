@@ -18,11 +18,17 @@ const PlayGroup = ({ images, columns = 3, gap = '8px', mainPhotoIndices = [] }) 
               mainPhotoIndices.includes(index) ? 'main-photo' : ''
             }`}
           >
-            <img
-              src={image.src}
-              alt={image.alt || `Image ${index + 1}`}
-              className="play-group-image"
-            />
+            {image.component ? (
+              <div className="play-group-image">
+                {image.component}
+              </div>
+            ) : (
+              <img
+                src={image.src}
+                alt={image.alt || `Image ${index + 1}`}
+                className="play-group-image"
+              />
+            )}
           </div>
         ))}
       </div>

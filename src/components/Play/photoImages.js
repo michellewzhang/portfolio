@@ -5,7 +5,7 @@ import photo4 from "../../images/play/photos/photo4.jpg";
 import photo5 from "../../images/play/photos/photo5.jpg";
 import photo6 from "../../images/play/photos/photo6.jpg";
 import photo7 from "../../images/play/photos/photo7.jpg";
-import photo8 from "../../images/play/photos/photo8.jpg";
+import photo8 from "../../images/play/photos/photo8.png";
 import photo9 from "../../images/play/photos/photo9.jpg";
 
 export const photoImages = [

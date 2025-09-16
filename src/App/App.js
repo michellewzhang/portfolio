@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import logo from "../images/logo.png";
 import Clock from "../components/Clock/Clock";
 import backToTop from "../images/back_to_top.png";
+import peanuts from "../images/peanuts.png";
 import Play from "../components/Play/Play";
 import "./App.css";
 
@@ -85,7 +86,7 @@ function App() {
     <>
     <BrowserRouter>
     <Wrapper>
-    <div>
+    <div className="app-container">
       <section>
       <Navigation />
       </section>
@@ -108,6 +109,7 @@ function App() {
           <img src={backToTop} alt="back to top" className="back-to-top-img" />
         </button>
       )}
+      <PeanutsCharacter />
       </div>
       </Wrapper>
     </BrowserRouter>
@@ -185,5 +187,20 @@ function Projects() {
     </>
   );
 }
+
+const PeanutsCharacter = () => {
+  const location = useLocation();
+  
+  // Only show on home page
+  if (location.pathname !== "/" && location.pathname !== "/projects") {
+    return null;
+  }
+  
+  return (
+    <div className="peanuts-character">
+      <img src={peanuts} alt="peanuts character" className="peanuts-img" />
+    </div>
+  );
+};
 
 export default App;

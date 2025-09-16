@@ -1,6 +1,12 @@
 /* Import variables from index.css */
 @import url('../index.css');
 
+/* Main app container */
+.app-container {
+  position: relative;
+  min-height: 100vh;
+}
+
 /* Logo styles */
 .logo {
   margin-left: 30px;
@@ -116,4 +122,32 @@
 .back-to-top:active {
   transform: translateY(-2px) scale(0.95);
   transition: all 0.1s ease;
+}
+
+/* Peanuts character above footer */
+.peanuts-character {
+  position: absolute;
+  bottom: 120px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.peanuts-img {
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .peanuts-img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .peanuts-img {
+    height: 130px;
+  }
 }

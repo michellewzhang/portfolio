@@ -131,7 +131,8 @@ export default function About() {
 
                     <FadeInSection>
                       <div className="about-description-small"> 
-                       ✣ full stack software engineer at <a className="highlight-link" href="https://sentry.io/welcome/" target="_blank" rel="noopener noreferrer">sentry</a>
+                       ✣ full stack software engineer at <a className="highlight-link" href="https://glean.com/" target="_blank" rel="noopener noreferrer">glean</a>; 
+                       prev at <a className="highlight-link" href="https://sentry.io/welcome/" target="_blank" rel="noopener noreferrer">sentry</a>
                        <br></br>
                        ✣ based in sf, raised in ny, born in pa!
                       </div>
@@ -139,7 +140,7 @@ export default function About() {
 
                     <FadeInSection>
                       <div className="about-description"> 
-                        i'm a developer & aspiring product designer based in san francisco. 
+                        i'm a software developer based in san francisco. 
                         i graduated from <a className="highlight-link" href="https://www.cs.cmu.edu/" target="_blank" rel="noopener noreferrer">
                         carnegie mellon</a> with a bachelors in computer science, a concentration in human-computer interaction,
                         and a minor in business administration.
@@ -156,10 +157,9 @@ export default function About() {
 
                     <FadeInSection>
                       <div className="about-description"> 
-                        i'm a fan of trying weird recipes and making a mess in my kitchen, 
-                        chasing my next running pr, making elaborate charcuterie boards for gatherings i host,
-                        and capturing moments on camera. on the weekends, i also work as an 
-                        event facilitator at a <a href="https://thepuppysphere.com/" className="highlight-link" target="_blank" rel="noopener noreferrer">puppy yoga studio</a>!
+                        i'm a fan of trying weird recipes, chasing my next running pr, 
+                        making elaborate charcuterie boards for gatherings i host,
+                        and capturing moments on camera.
                       </div>
                     </FadeInSection>
 
